@@ -1,0 +1,2535 @@
+/*  ways of using css :
+inline : inside of the html element itself
+internal : inside of the <style> tag in the html document 
+external :linking the html document to this type of files 
+
+olaviat ha baraye google engine:
+inline > internal > external
+
+
+
+diffrence between ID and CLASS :
+
+id : its for a special tag , and you cannot use the name of the same id for other tags
+you cant say 
+p id = 12
+h1 id = 12
+it doesnt work 
+more than 1 element it self shouldnt have the same id name
+
+class : its normal , and you can use it for multiple elements
+
+agar dota tag dar HTML class shoon yeki bashe va faghat mikhasti yekishoono seda bezani (eshare koni)
+esm tag + .esm class
+for example :
+
+h4 class amir
+h5 class amir
+
+age mikhai bein ina faghat h5 ro eshare koni :
+h5(esm tag).amir (.esm class)
+
+agar h4
+h4.amir
+
+
+<h1 class="amir1 amirkoli">this is an h1 tag </h1>
+<h2 class="amir2 amirkoli">this is an h2 tag </h2>
+<!--vaghti hengam class gozashtan space mizari , az space be badesh ye esm class jadid tarif mikone
+for example (in css) :
+
+.amir1{
+   font size 15
+}
+.amir2{
+   font size 12
+}
+amirkoli{
+   color blue 
+}
+
+
+inja ye seri chizashoon moshtarak hastesh baraye hamin intori mikonim 
+alan color blue baraye dotashoon emal mishe-->
+
+
+id > class (az lahaz olaviat)
+
+
+COMMENTS IN CSS 
+ctrl + /
+
+
+
+BOX MODEL : 
+har element ye box dare ke ma mitoonim oon box ro tanzim , koochik ya bozorg konim
+you can easily see the amount (size) of the box of your element in inspect 
+there is the size of the content (text , img and etc)itself (height and width)
+there is the border of the element of the directions
+there is the padding , of the directions 
+there is margin , of the directions
+
+NOTE : if you set a width , block or inline wont apply anymore
+*/
+#box-model1{
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 200px;
+    height: 120px;
+   border: red solid 4px;
+   box-sizing: border-box;
+   /* border-width: 4px;
+   border-color: red;
+border-style: solid; */
+padding: 5px;
+margin-left: 200px;
+}
+/* PADDING : THE SPACE OF THE ELEMENT INSIDE THE PARENT ELEMENT
+
+(padding top 10 px 
+padding left 10 
+padding right 10 
+padding bottom 10) = (padding = 10 px)
+padding normal har cheghadr value behesh bedi baraye hame jahat ha emal mikone
+
+mitooni halat kholase benevisi baraye hame direction ha  vali bayad intori bashe
+padding 10px (top) 5px (right) 4px (bottom) 2px (left)
+be soorat ساعتگرد hast 
+
+
+same as margin
+*/
+
+
+/*
+CALCULATING TOTAL WIDTH AND HEIGHT :
+
+the total width of an element should calculated like this :
+
+total width element = width + left padding right + right padding + left border + right border + left margin + right margin 
+
+the total height of an element should be calculated like this : 
+
+total height element = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+margin , padding , border , width or height themselves 
+
+for height : bottom and top 
+for width : right and left 
+
+also remember that width and height in box models are the opposite of persian*/
+
+/* USING A PROPERTY FOR ALL OF THE ELEMENTS IN PROJECT : 
+when you want to apply a property with the same value to all of the elements
+instead of using it for all of em do this avalin khat code
+
+*{
+   font size 12px
+}
+this applies ALL the elements
+*/
+
+
+
+/*
+EXACT SIZE WITH "BOX-SIZING" PROPERTY : 
+
+as you know , when you apply padding in an element , the element gets larger 
+so we can say 
+padding impacts the size of an element 
+
+so when the UI person tells you that the text , botton or img or ... should be exactly
+for example 100 dar 300 
+
+and you add some padding and it becomes for example 120 dar 320 
+so you have to make it to EXACTLY  100 dar 300
+
+you should use a property called "box-sizing" and select border-box
+when you do that , the padding still works but doesnt impact the size of the element anymore
+by adding this property , we tell the engine that we want our element to be EXACTLY 
+our width and height
+
+so now , our exact height is 120px and width is 200px 
+without box sizing , the padding and the border impacts them and makes them to 218 dar 138 
+but we want exactly 200 dar 120
+
+so lets set the box sizing
+CSS RESET(SUMMERY TOR) :
+its almost always good to add padding 0 margin 0 (cuz the engine has a defult engine itself and we dont want that) box-sizing border-box at the first line for all of the elements
+at the top of the page
+like this : 
+
+*{
+box-sizing: border-box
+margin 0 
+padding 0 
+}*/
+/* PADDING FOR TEXT :
+
+if you give padding to a text , you can imagine the width (you can find it as the background-color) as the button or etc. */
+/* TEXT-ALIGN = JUSTIFY :
+
+for a better eye vision , text align justify allows you to view the text better and put the lines horizintally at the same margin from left or right*/
+
+/* HOW TO CALCULATE THE LINE-HEIGHT : 
+line height fasele bein khotot ro moshakhas mikone
+
+first , you should look at the font-size
+if you didnt set it yourself you can find the defult by inspector 
+
+so for english articles its like this : 
+
+font-size × 1.6 = the line-height amount
+20 × 1.6 = 32 
+
+for the persian one : 
+font-size × 1.5 = the line-height amount
+20 × 1.5 = 30
+*/
+/* TEXT DECORAION : 
+its for removing the underline of an A tag */
+
+
+/* TEXT DECORATION : LINE-THROUGH : 
+khat keshidan roie text (mesl takhfif khordan) */
+
+
+/* LETTER SPACING : 
+space between LETTERS not words
+
+it has negative (-) too*/
+
+/* WORD SPACING :  
+
+the space between WORDS
+it has negative (-) too
+*/
+
+
+/* TEXT-SHADOW : 
+text-shadow is for the shadow of the text that we have
+it gets 4 values 
+mehvar X (az lahaz samt chap va rast bodan)
+mehvar Y (bala va paeen)
+meghdar blur boodan 
+rang (color)
+
+there is a type of square right before the first value
+click on it*/
+
+
+
+.justify-test{
+  
+   font-size: 20px;
+   line-height:32px ;
+ text-decoration: overline;
+ text-decoration: line-through;
+ text-transform: uppercase;
+ /* letter-spacing: 12px; */
+  
+}
+
+/* TEXT-TRANSFORM : 
+baraye inke begi horoof capital bashe ya lowercase
+capitalaize:
+horoof aval har kalame bozorg mishan */
+
+/* WHITE-SPACE PROPERTY : 
+this tag is for observing the line-breaks and the spaces between the lines
+
+you see , without the white space there are line breaks that the engine of google developed it itself
+
+but with white-space we tell the engine that develop the text as we like
+
+with the spaces and line-breaks
+without the space but with the line-breaks
+with the line-breaks but without space
+or even normal
+
+VALUES : 
+NOWRAP:
+this one
+ doesnt oberve anything , line-breaks or spaces
+it doesnt even observe the google engine itself
+
+PRE-LINE:
+this one
+ observes the line-breaks but not the spaces 
+
+
+PRE-WRAP:
+this one
+ observes everything , spaces and line-breaks
+
+
+
+ NORMAL : 
+ this one
+ does the engines duty 
+
+
+*/
+
+.white-space-test{
+   font-size: 30px;
+   font-weight: 500;
+   white-space: nowrap;
+  
+   border: 1px solid black;
+   overflow: hidden;
+ text-overflow: ellipsis;
+
+ 
+
+}
+.img-test{
+   margin-left: -20rem;
+   
+
+  
+  
+}
+
+.nahbro{
+   border: 2px solid black;
+   width: 20px;
+ word-wrap: break-word
+  ;
+}
+
+.img-G{
+width: 40px;
+vertical-align: middle;
+
+
+}
+.writing-mode-test{
+ 
+   font-size: 40px;
+   font-family: cursive;
+   writing-mode: vertical-rl;
+   letter-spacing: 20px;
+   direction: ltr;
+   margin-left: 100px;
+   border: 2px solid black;
+
+}
+
+/* VERTICAL-ALIGN: 
+
+agar be element i ke bishtarin ertefa ro nesbat be saier ajza dare 
+(bozorgtarin onsor az nazar ertefa dar kenar baghie) vertical-align bedim 
+rooye element haye KENARISH ke kanar haman tasir mizare
+
+NOTE: be element i ke mikhai biad masalan middle nabayad vertical align bedi
+balke be element kenari bayad bedi
+aza ro nesbat be bozorgtarin ozv taraz midi
+example : 
+The element is aligned with the top of the tallest element on the line
+there is also px and stuff
+negative is going bottom
+normal (10px) goes top
+sub is down of the other
+super is top
+
+a parent + a tag + a tag
+if its a text you can use sub and sup*/
+
+.vertical-google-test{
+width: 32px;
+vertical-align: sub;
+background-color: grey
+;
+
+}
+.google-text{
+
+}
+.aaa{
+   background-color: yellow;
+   display: inline;
+   vertical-align: 30px;
+   
+  
+}
+.iii{
+
+  height: 70px;
+
+ 
+
+}
+.help-me{
+vertical-align: 32px;
+}
+
+.tired-asf{
+   vertical-align: 30px;
+}
+.dddd{
+   
+   background-color: yellow;
+   display: inline;
+}
+
+/* FONTS IN CSS : 
+
+most of the fonts are ttf but we dont want that
+only eot 
+woff
+woff2 
+is what we want */
+/* FOR ADDING FONTS TO THE WEB PAGE : 
+
+first 
+you have to download the font
+drag it to your folder 
+then
+
+write 
+@font-face {
+   src url (address the font)
+   format (eot and etc)
+   */
+   @font-face {
+      /* font-family:a name for this ; */
+      src: url() format();
+   }
+
+   /* BACKGROUND PROPRERTIES : 
+   there is background-color
+   
+   there is background-img
+   its for when you want to set an img for your bg 
+   set url(the address)
+   
+   there is background-position 
+   you can set that where the bg img is placed 
+   center top right bottom left 
+   even you can set many values
+   like : 
+top right
+
+
+   there is background-size 
+   the size of the bg
+   there are 2 values for this
+
+   cover:
+   if you want it to fully cover the page 
+
+   contain: if you want the img fully visible 
+   and you dont care about covering the page 
+
+
+
+
+
+  there is  background-attachment 
+  	Sets whether a background image is fixed or scrolls with the rest of the page
+   if scrolls 
+   the bg scrolls too 
+   but if fixed
+   the bg if fixed and only the text scrolls
+
+
+
+   there is background-repeat 
+   there are sometimes that the pic doesnt fully cover the page and then the
+   google itself repeats the img to cover
+   with this property you can say dont repeat 
+   or only repeat them in x or y mehvar
+
+
+
+   there is background-clip
+   halat addi border miofte roye bgc
+
+   there are 2 values for this 
+
+   content-box
+   it only displaies the content of the box and doesnt care about the padding or border
+   
+   
+   padding-box 
+   dige border zir bgc nemiofte va faghat padding va content daroon bgc an
+   
+
+
+   if you have a box and border 
+   you can set 
+
+
+   */
+   /* html{
+background-image: url(./img/bg.jpg);
+background-attachment: fixed;
+   } */
+   /* USING ICONS FROM GOOGLE : 
+   fist
+   search on google 
+   google icon fonts
+   and then go to the site
+find the icon or the symbol that you want 
+click 
+and then paste the link that it says to the head tag
+then there is a class that there are styles for it
+give that class name to the tag
+i think for the icons you should remove outlined in the name from the class
+   IF YOU CANT UNDRESTAND OR APPLY THIS YOU CAN USE DEVELOPER GUIDE 
+
+
+
+    */
+    
+    
+/* USING FONT AWESOME ICONS : 
+
+first , search "font awesome" in google 
+
+go to the site and find the icon that you want 
+
+you can search BUT WITH VPN
+
+then , find the cdn(the link in the head tag) in the docs menu
+
+and then paste it to the head tag
+
+after that , paste the icon name (<i class="fa-solid fa-user"></i>)
+
+done*/
+
+
+/* STYLING LISTS IN CSS : 
+
+there are a few properties you can use in order to style lists 
+
+
+list style type :
+it specifies how the "bullets" of lists look like by its defult values 
+
+list stlyle img :
+you can put url() and then put images for the "bullets"
+
+list style position : 
+there is only inside and outside 
+outside is the normal value (defult)
+inside ye zare mikeshatesh jelo
+
+list style : 
+shorthand 
+*/
+
+
+/* DIFFERENCE BETWEEN DISPLAY NONE AND VISIBILITY HIDDEN : 
+
+they both hide the element 
+But
+
+dar visibility hidden , faghat tag dide nemishe va faza ro por mikone
+
+ama dar display hidden , engar ke element aslan chap nashode va nistl*/
+   
+
+.list-style{
+   list-style-image: url(../img/list-style.png ) ; 
+
+}
+
+/* OUTLINE IN CSS : 
+border of an input is outline 
+
+if you set a border for an input it doesnt work very well */
+/* OUTLINE IN CSS : 
+
+fazaye dakheli yek input ro outline migan 
+
+fazaye posht border
+
+you can learn it in w3school*/
+
+/* DIFFERENCE BETWEEN :FOCUS AND :ACTIVE : 
+
+for active you should hold the element 
+
+but  for focus , when you focus(click) on an input , the styles appear
+
+active might be used for every element but focus is mostly used for forms and etc*/
+
+
+
+/*
+CHANGE THE CHILD BY HOVERING ON PARENT ELEMENT : 
+
+
+.email-button:hover .email-icon, .email-button.hover .email-icon { color: sandybrown; }
+
+
+aval az hame moarefish mikoni(.email-button:hover .email-icon,) baad inkar roobero ro mikoni 
+
+havaset bashe ghabl az hover (baad az moarefi kardan) : nazari va . bezari
+.parent:hover .child, .parent.hover .child{}
+
+
+
+MIN-WIDTH AND MAX-WIDTH : 
+
+
+min-width says that the minimum of the width of the element is X 
+and it can be more if the size of the browser ls bigger 
+yani kaf kaf X hast va faghat bishtar mitoone beshe 
+
+they are both good for being responsive
+
+max-width says that the maximum size of an element is X
+and it can be smaller if the browser is smaller
+yani tah tahesh X hast va faghat kamtar mitoone beshe 
+
+
+
+
+   BOX-SHADOW IN CSS : 
+
+   box shadow is for giving shadow to the element (the box of the element ) not the content itself
+   box shadow gets 4-6 values . 
+
+   first one , the x mehvar (_) 
+   second one , the Y mehvar (|)
+   third one , the amount of blur-being
+   4th one , the amount of spread (pakhsh kardan)
+   5th one , the color
+
+   the first one can set to inset (the shadow appears inside of the element)
+
+
+   BORDER-RADIUS IN CSS : 
+   border-radius can be used short hand too (as we used it)
+   but , it can be used long hand too 
+
+   it gets 4 values . 
+   top left
+   top right
+   bottom right
+   bottom left
+   dar vaghe besorat saatgard value migire
+
+   now , if you set the value smth like this : 
+   border radius : 10px 20px ; 
+   what would actually happen is , if you dont give a value to one of them like for example here we didnt give value to bottom left 
+
+   if you dont do that , the bottom left actually copies the opposite value of it (top left)
+
+
+   !IMPORTANT IN CSS : 
+
+if you set a style for an element , and then you set the same property with a different value , 
+
+and you want the second one to apply , you have to put !important next to the value of the element 
+example : 
+
+width : 200px
+width : 300px !important 
+
+the 300 will apply .
+*/
+
+/* FIRST CHILD PSEUDO CLASS IN CSS : 
+
+lets say you have a container
+and inside of that container , there are 4 p tags
+
+if you want to call the first p tag of that parent element , you have to use first child
+
+if you use the p tag and first child only (p:first-child) its gonna call all of the p tags that are
+
+the first child of their parent
+but if you want to call a specifc one 
+give parent a class or call its name 
+and do it like this 
+
+parent p:first-child
+
+LAST CHLID IS THE OPPOSITE OF THE FIRST CHILD*/
+
+.first-child-parent li:first-child{
+   color: red;
+}
+
+
+/* FIRST OF TYPE PSEUDO CLASS IN CSS :
+lets say you have a container
+and inside of that container , you have multiple different tags 
+
+and you want to call only one specific of them 
+you call the parent , and then you choose what type of them you want (span?strong?img?p?) and after that :first-of-type
+parent type:first-of-type
+
+NOTE : this only chooses the first one of that type 
+
+LAST OF TYPE IS THE OPPOSITE
+*/
+
+.first-of-type-parent strong:first-of-type{
+   color: red;
+}
+
+/* NOT(SELECTOR) IN CSS:
+
+lets say you have a container and you one to give the same style to all of the children
+
+but , you one of them is special and you dont want only one of them to have that style 
+
+.children:not(p)
+
+toye in children in p ro dar nazar nagir vali in style haro baraye baghie emal kon
+*/
+
+/* NTH CHILD YOU KNOW IT
+
+NTH OF TYPE IN CSS : 
+
+the number of that type you want 
+you have for p's 
+you want to choose the 4th one
+ parent p:nth of child 4
+*/
+
+/* YOU CAN JUST SEARCH AND LEAERN ABOUT OTHER PSEUDO CLASSES */
+
+/* BORDER-SPACING IN CSS  */
+
+/* ODD AND EVEN IN NTH CHILD  */
+
+
+/* practice tables in css and create a great table and complete pseudo classes yourself and learn all of them 
+*/
+
+/* IN-RANGE AND OUT-OF-RANGE PSEUDO CLASSES IN CSS : 
+
+
+IN-RANGE : if you have some sort of input:number then you specify min and max (you should) 
+
+lets say you say 
+min 2 max 4 
+if the users enter 2 to 4  , the styles you said will appear on the input
+
+OUT-OF-RANGE : 
+if the users enter 5 or more , the styles you said will appear on the input
+
+
+ */
+
+
+
+
+ /* INVALID ,VALID AND INPUT PATTERNS IN HTML AND CSS : 
+ 
+ if you set a pattern for an html input , you are basically saying which characters you allow the users 
+ to use .
+ 
+ how you do that is : 
+ <input type="text" min="2" max="7" class="text-min-max-test" pattern="[a-zA-Z0-9]*">
+ 
+ be carefull that you put that * after that
+ 
+ 
+ VALID AND INVALID PSEUDO CLASSES: 
+ 
+ VALID : you are basically saying that if the content was alright , appear these styles
+ 
+ INVALID : you are basically saying that if the content was wrong , appear these styles
+ 
+ 
+ 
+NOTE : IN-RANGE AND OUT-OF-RANGE ARE ONLY USED FOR NUMBERS BUT VALID AND INVALID ARE USED FOR
+OTHER CHARACTERS.*/
+
+
+/* styling tables on yt
+
+border collapse
+
+
+*/
+
+/* PSEUDO ELEMENTS IN CSS : 
+
+::selection : with this one , you specify how the user can highlight (copy drag etc) the text 
+
+TWO IMPORTANT ONES THAT ARE MOSTLY USED ARE : 
+
+::before : if you want to put someting BEFORE a content 
+
+
+::after : if you want to put smth AFTER a content 
+
+
+NOTE : FOR BOTH OF THESE PSEUDO ELEMENTS , "CONTENT" PROPERTY IS REQUIRED 
+
+::marker : while having a list , you can actually style the bullet by this pseudo element 
+so if you set the color to red 
+the bulletts of the list will be red
+HOW TO USE CONTENT PROPERTY : 
+
+IF YOU WANT TO APPLY NORMAL TEXT OR UNICODES (HTML OR FONTAWESOME) , YOU SHOULD ADD "" AND WRITE INSIDE 
+
+FOR UNICODES , YOU SHOULD ADD THEM LIKE THIS : 
+"\THE UNICODE"
+DONT FORGET THE BACK SLASH (\)
+
+FOR IMAGES  ADD URL
+
+*/
+
+
+
+/* 
+.google-after-before-test::after{
+content:;
+height: 30px;
+width: 30px;
+} */
+.comments-before-after::after{
+   content: "\26E4";
+   font-size: 34px;
+   
+}
+
+/* hexa rgb rgba
+
+css colors 
+clear 
+befor after pseudo elemente*/
+
+
+/* CSS COLORS : 
+
+RGB : red , green , blue 
+0 to 255
+rgb(0,255,0)
+now this is green 
+ 0 0 0 is black
+ 255 255 255 is white
+
+RGBA : is the same as RGB but added opacity at the end 
+red green blue opacity (alpha)
+opactiy is 0 to 1
+rgba()
+
+HEX : RR GG BB 
+numbers are mixed with words 
+and how this works is
+
+1 -> 9 (we use numbers for 1 to 9) after that , A -> F .
+so its also 0 to 255
+NOTE : YOU DONT REALLY NEED TO KNOW HEX , BECAUSE YOU CAN USE COLOR PICKER OR THE UI PERSON GIVES YOU THE COLOR
+
+#000000
+TIP : YOU CAN USE COLOR PICKER AND COPY THE HEX OR OTHERS CODE IN HTML .
+
+
+*/
+
+
+/* LEARN FLOAT AND CLEAR IN CSS */
+
+
+
+/* CSS FLOAT AND CLEAR IN CSS : 
+
+FLOAT : when you want an element to wrap around the other element , you give the
+other element flot property 
+
+basically , the second element is allowing other elements to wrap around it .
+
+CLEAR : 
+if you  dont want some elements to wrap around it and you want only some of them ,
+you have to give clear property to those you DONT want them to wrap around it .
+
+it has 3 important values
+left
+right
+both
+depends on what value of float you have setted for that img , you can set for this .
+
+for example : 
+if you set float right for that img
+set clear right for that p who you dont want to wrap around that img*/
+/* 
+
+REMEMBER TO USE SEMANTIG WEB TAGS 
+
+AND READ ABOUT DISPLAY FLOW ROOT AND OVERFLOW HIDDEN TO SOLVE THAT PROBLEM IN FLOAT
+
+ALSO , YOU CAN TAKE TIME TO REVIEW THE TAGS YOUVE LEARNT BEFORE
+START IT .*/
+
+
+/* DISPLAY FLOW ROOT IN CSS : 
+
+there are times where you are using float prp and the text wraps around it
+correctly 
+but if you want to set a bg and see what happens , if the text isnt 
+long enough , the image will stick out of the bg 
+
+there are 2 ways to fix this
+
+overflow auto
+display flow-root
+
+maybe clear might work too*/
+
+
+
+
+
+/* GRADIENT IN CSS : 
+
+GRADIENT COLORS GIVE YOU THE OPTION TO USE MUTIPLE COLORS AT TIME FOR A SINGLE ELEMENT
+
+we have 2 types of gradient in css
+
+linear gradiant (most common ) : you can specify the direction (to left , to right etc)
+you can specify deg and the percent which says what percent of the 
+element should that color fill 
+
+
+
+radial gradient : it specifies the colors from the absolute center to normal 
+you can specify  shapes (circle , square etc)
+
+
+YOU CAN ALSO USE WEBSITE TO GET A BETTER COLOR
+
+
+BORDER-IMAGE IN CSS : 
+
+WITH THIS PRP , YOU CAN SPECIFY IMG FOR THE BORDER OF A CONTENT 
+
+BUT , NOTE THAT THE IMG SHOULD FIT THE BORDER PERFECTLY 
+
+4 CONRNERS
+4 MAIN 
+1 INSET 
+
+we have multiple prps for this but we can write it shorthand too 
+
+border image source : you can say url or linear gradient
+
+border image outset : you can specify the space between the content and the border
+
+border image width : specifies how big the pieces would be
+
+border image slice : specifies how much can it slice from one piece 
+if the piece defult is 30px , and you say 10 , it only shows 1:3 of that piece
+you can say fill , and it shows the inset of the img too
+
+border image repeat : there are different values for this
+
+repeat which is a defult version 
+
+stretch : stretches pieces
+
+
+ if the pieces have got problems and some of them are displaying badly , you should set these two values
+
+ round :it makes the pieces as fit as possible and they stick to each other
+
+space : it gives some space between the pieces so that they can fit ok
+*/
+
+
+
+.linear-gradient{
+   width: 500px;
+   height: 100px;
+   background-image: linear-gradient(to left,red,blue);
+}
+
+.radial-gradient{
+   width: 500px;
+   height: 100px;
+   background-image: radial-gradient(  circle,red ,blue,green);
+}
+
+
+.gradient-button{
+ border-radius: 20px;
+ background-image: linear-gradient(to left,red,blue);
+ width: 50px;
+ height: 30px;
+ color: white;
+ border: none;
+}
+.gradient-button:hover{
+   margin-top: 10px;
+   transition: 0.7s;
+}
+.border-image-test{
+   height: 300px;
+   width:405px;
+   border: 20px solid transparent;
+border-image-source: url(img/border-image.png);
+border-image-slice: 27;
+border-image-repeat:round; 
+/* border-image-width: 50px; */
+
+
+
+}
+
+
+
+/* FILTER PRP IN CSS : 
+
+FILTER PRP ALLOWS DEVELOPERS TO ACTUALLY STYLE THE IMG THAT WE HAVE WITHOUT USING PHOTOSHOP
+
+blur : you know that , it takes pixels
+
+brightness : specifies how bright or dark the pic can be 
+it takes numeric values 
+0 to 100 
+below 1 is dark
+after 1 is bright
+
+drop shadow : works exactly the same as box shadow and text shadow
+
+opacity : the same as the opacity prp itself
+
+grayscale : makes the color gray 
+value of 0 to upper than
+the upper the grayer
+
+invert : transfers the color to the opposite of it
+value of 0 to upper than 1
+1 is normal , the upper , the more opposite 
+
+saturation : makes all of the specific colors bright in their role 
+makes it closer to the acual color they are (rgb)
+
+sepia : sepia makes your img kinda old timey and bronze
+
+contrast : its kinda the same as saturate and makes the color bright
+
+
+they usually get a value from 0 to upper than 1 , but you can specify percentages if you want to
+
+blur is px
+
+NOTE : YOU CAN WRITE THESE WITH EACH OTHER TOO BUT IN ANOTHER CODE
+
+FILTER CONTRAST 10
+FILTER BLUR 5 
+
+THEY BOTH APPLY NOW
+
+ */
+
+ .for-contrast-and-others{
+   filter: saturate(15);
+
+ }
+
+ .for-contrast-and-others:hover{
+   transition: 5s;
+   filter: blur(2px);
+
+ 
+ }
+
+
+
+ /* ROOT IN CSS : 
+ 
+ FOR SPECIFYING VARIABLES AND USING THEM MUTIPLE TIMES , WE CAN DO THAT IN THE 
+ ROOT PSEUDO ELEMENT 
+
+ YOU ONLY GIVE THE VARIABLE A VALUE , NOT A PROPERTY
+ YOU BASICALLY GIVE A SPECIFIC VALUE TO THE VARIBABLE AND USE THAT VALUE FOR ELEMEMENTS YOU WANT
+ 
+--the name : value
+ 
+ 
+ #AMIR{
+   color : var(thename)
+ }*/
+
+ :root{
+ --button-colors: yellow ;
+
+ }
+ .variables-test{
+   background-color: var(--button-colors);
+ }
+
+
+ /* MAZHOOLAR NEVISI IN CSS AND WEB PROJECTS : 
+ 
+ THE AVERAGE AMOUNT OF CODE FOR BIG PROJECTS IS AROUND 1000 
+
+ AND ITS HARD TO SCROLL LIKE THAT 
+
+ SO WHAT YOU WOULD LIKE TO DO IS : 
+
+ MAKE THE CODE INTO DIFFERENT PARTS AND WRITE THEM INTO DIFFERENT PARTS AND THEN IMPORT THEM INTO ONE FILE
+
+ FOR EXAMPLE , WE WOULD LIKE TO PUT OUR CSS RESET INTO ANOTHER FILE 
+ AND THEN IMPORT IT INTO ONE FILE
+
+OR , PUT THE CODE OF THE FOOTER TO ANOTHER FILE SO THAT THE FILES ARE CLEANER
+BUT , IT WOULD BE BAD FOR LOADING PAGE
+AND YOU SHOULD FESHORDE THEM TO HAPPEN
+ 
+ AND HOW YOU DO THAT IS : 
+
+ YOU CUT THE CODE AND THEN PASTE IT IN ANOTHER FILE 
+
+ AND THEN , YOU USE @IMPORT TO IMPORT THAT FILE
+
+ HOW YOU DO THAT IS : 
+ 
+ ONE WAY :  @IMPORT "..CSS/CSSRESET"
+ SECOND WAY : @ IMPORT URL()
+
+
+ @IMPORT SHOULD BE THE FIRST LINE OF CODE
+
+
+ */
+/* @CHARSET UTF-8 IN CSS : 
+
+ITS FOR SUPPORTING SPECIAL CHARACTERS FOR OLDER BROWSERS 
+IT HAS TO BE THE FIRST LINE , EVEN MORE IMPORTANT THAN @IMPORT
+*/
+.just-a-test > p{
+color: rgba(9, 255, 0, 0.904);
+background-color: blue;
+}
+.just-a-test span{
+   color: orangered;
+   background-color: aquamarine;
+}
+#just-for-testing-and-learning-combinators{
+   font-size: 23px;
+}
+#just-for-testing-and-learning-combinators > p{
+   color: darkorange;
+   background-color: rgb(206, 238, 130);
+}
+#just-for-testing-and-learning-combinators span{
+   color: aqua;
+   background-color: tomato;
+}
+#just-for-testing-and-learning-combinators div p {
+   color: darkorange;
+   background-color: beige;
+}
+#just-for-testing-and-learning-combinators ~ span{
+   color: cornflowerblue;
+   background-color: crimson;
+}
+
+/* COMBINATORS IN CSS : 
+
+NORMALLY , WHEN YOU WANT TO CHOOSE AND STYLE A CHILD INSIDE OF ITS PARENT , YOU SAY "PARENT CHILD {}"
+
+WHEN YOU SAY FOR EXAMPLE 'PARENT P{}' IT CHOOSES ALL OF THE P ELEMENTS THAT ARE INSIDE OF ITS PARENT
+EVEN THOSE WHO ARE INSIDE OF A PARENT FOR EXAMPLE DIV THEMSELVES
+
+BUT
+WHEN YOU DONT WANT THIS AND YOU DONT WANT TO CHOOSE 'THOSE WHO ARE INSIDE OF A PARENT FOR EXAMPLE DIV THEMSELVES'
+YOU HAVE TO SAY : 
+
+"PARENT > P"
+SO IT WONT CHOOSE ITS GRANDCHILDREN
+
+IT CHOOSES ITS ACTUAL CHILDREN (P)
+
++: SO IF THE PARENT TAGS IS CLOSED AND YOU WANT TO WRITE OTHER CODES OUTSIDE OF THE PARENT TAG , FOR EXAMPLE : 
+
+<DIV>
+
+</DIV>
+<SPAN> </SPAN>
+AND YOU WANT TO CHOOSE THE SPAN BUT WITHOUT WRITING A CLASS 
+YOU HAVE TO SAY: 
+
+DIV + SPAN{}
+AND WHEN YOU DO THAT , IT CHOOSES THE ONLY AND ONLY ONE AFTER THAT AND NO OTHER ONES
+EVEN IF THERE IS ANOTHER SPAN AFTER THE FIRST ONE , IT ONLY CHOOSES THE FIRST ONE .
+FOR EXAMPLE : 
+
+<DIV>
+
+</DIV>
+<SPAN> </SPAN>
+<SPAN> </SPAN>
+IT WILL ONLY CHOOSE THE FIST SPAN 
+
+~: THIS ONE , IS COMPLETELY THE OPPOSITE OF THE + 
+IT CHOOSES ALL OF THE SPAN TAGS AFTER DIV 
+
+YOU CAN SPECIFY CLASSES BUT FOR CLEAN CODE , ITS BETTER TO DO IT LIKE THIS
+ */
+ /* ATTRIBIUTE SELECTORS IN CSS : 
+ THERE IS A WAY OF SPECIFYING AND SELECTING WHEN STYLING
+ 
+ THIS IS MOSTLY USED FOR FORMS (LOGIN INPUT ETC)
+ 
+ FOR EXAMPLE : 
+ 
+ IF AN INPUT HAS THE VALUE ATTRIBIUTE OR ANY OTHER ATTRIBIUTES , 
+ 
+ YOU CAN SELECT IT WITH A []
+ 
+ INPUT[VALUE]
+ OR
+ INPUT[DISBALED]
+ SO IF YOU WANT TO SPECIFY A VALUE FOR THEM , ITS THE SAME
+ INPUT[VALUE="0"]
+ BUT ALWAYS BE CAREFUL THAT YOU CHOOSE THE RIGHT CLASS FOR EVERYTHING SO THAT YOU DONT LOSE IT 
+
+
+ lets change the example to images with alt attribiutes : 
+
+ ITS THE SA
+ ME FOR THE ALTS WHO ONLY HAVE ONE WORD IN THE VALUE 
+ IMG[ALT="DAMN"]
+
+ BUT
+  IF IT HAS SO MANY WORDS IN IT AS A VALUE , YOU SHOULD ADD ~ BEFORE THE EQUAL .
+ IMG [ALT~="DAMN"]
+
+
+ */
+
+
+
+ /* YOU CAN SOMETIMES STYLE THE ATTRIBIUTE ITSELF */
+
+  /* CLASS ATTRIBIUTE SELECTING: 
+  THERE ARE LOTS OF DIFFERENT WAYS TO DO THIS AND WE WILL COVER ALL OF IT 
+  FIRST , LETS COVER HOW YOU CAN CALL THE CLASS ATTRIBIUTE ITSELF WITH NO AFFECT
+  [CLASS="CLASSNAME"]
+
+
+  THERE IS : 
+  [CLASS|="CLASSNAME"]
+  LOOKS FOR THE CLASSNAME SPECIFIED IN THE CLASSNAMED OF THOSE TAGS
+  THEY SHOULD BE THE FIRST WORD
+  IF THERE IS ANOTHER WORD , THERE SHOULD BE A DASH (-) BETWEEN THEM
+
+  THERE IS 
+    [CLASS^="CLASSNAME"]
+    ITS THE SAME AS THE PREVIOUS ONE BUT , HAVING A DASH (-) AINT NECESSARY 
+    FOR EXAMPLE IF THE CLASSNAME IS 
+    TEXTEXAMPLE
+    THERE IS TEXT IS IT SO IT WORKS 
+
+
+   THERE IS 
+     [CLASS$="CLASSNAME"]|
+      ITS THE SAME AS THE PREVIOUS ONE BUT IT HAS TO BE AT THE END 
+FOR EXAMPLE THE CLASS NAME SHOULDT BE TEXT-AMIR
+IT HAS TO BE 
+AMIRTEXT
+AND THE UNDERLINE AND DASH AND ETC DOESNT MATTER
+
+    THERE IS 
+    [CLASS*="CLASSNAME"]
+    THIS DOESNT CARE
+    IF THERE IS A TEXT WORD IN IT THEN OK 
+    DOESNT MATTER IF ITS AT FIRST OR ETC
+
+    USE these in your portfolio 
+
+    /* | first one and dash
+^ first one without dash
+$ last one without dash 
+* all of em with or without at the first or end doesnt matter*/
+
+/* OBJECT FIT IN CSS : 
+
+IT IS USED TO FIT PICTURE AND IMAGES IN MANY DIFFERENT WAYS 
+
+THERE ARE MANY VALUES FOR THIS 
+CONTAIN : 
+IF YOU PAY ATTENTION , EVERY EACH IMG HAS ITS OWN SIZE
+AND THATS WHAT MAKES IT FIT 
+THEY HAVE TO BE CONSONANT SO THAT THE PICTURE IS FULLY VISIBLE
+WHEN YOU SET A HEIGHT AND WIDTH FOR AN IMG AND YOU GIVE IT OBJECT FIT CONTAIN ,
+YOU ARE ACTUALLY MAKING THE WIDTH AND HEIGHT CONSONANT SO THAT IT IS FULLY VISIBLE
+AND WHAT ACTUALLY HAPPENS IS , THE COMPUTER FINDS THE BEST AND DOES IT ITSELF
+
+COVER : 
+WHEN YOU GIVE AN IMG A WIDTH AND A HEIGHT AND OBJECT FIT COVER , THE IMG WILL START 
+TO FILL FROM THE DIRECTION OF THE PAGE (LTR OR RTL) THAT AMOUNT YOU GAVE IT 
+
+FILL : THE DEFULT 
+
+NONE : YOU RESIZE THE ACTUAL IMG BY THE HEIGHT AND THE WIDTH YOU HAVE GIVEN 
+
+SCALE DOWN : THE IMG STAYS VISIBLE BUT THE SIZE AND THE IMG IT FILLS GETS SMALLER OR BIGGER */
+
+/* CENTERING ELEMENTS WITH CSS : 
+MARGIN AUTO 
+IF YOU WANT TOP TO CHANGE TOO : 
+MARGIN AMOUNTpx AUTO
+YOU SHOULD DO IT ONLY FOR THE CONTAINER (THE PARENT ELEMENT)
+
+BUT BUT BUT BUT BUT BUT 
+
+IF YOU WANT TO CENTER AN ELEMENT INSIDE OF ITS PARENT ELEMENT : 
+PARENT POSITION RELATIVE
+CHILD POSITION ABSOLUTE 
+
+CHILD LEFT 50%
+RIGHT 50%
+TRANSFORM : TRANSLATE (-50% , -50%)
+ (ITS FOR ANIMATING BUT HERE ITS BEING USED) 
+NOTE: DONT FORGET TO SET A MAX WIDTH AND HEIGHT FOR THE CONTAINER
+
+
+
+*/
+
+
+ 
+
+ div [class|="text"]{
+   font-size: 30px;
+   color: darkblue;
+ 
+   
+ }
+ .just-to-test{
+   border: 5px solid black;
+   border-image: linear-gradient(to left,red,blue);
+   border-image-slice: 10;
+ 
+   overflow: auto;
+
+ }
+ .just-to-test .amirdodo{
+text-align: center;
+ }
+
+ /* HOW TO CENTER A NON TEXT WITH TEXT ALIGN IN CSS : 
+ MAKE A BLOCK PARENT ELEMENTS FOR IT (DIV,P,SECTION AND OTHER BLOCK ELEMENTS)
+ AND GIVE THE     PARENT     ELEMENT TEXT ALIGN CENTER  */
+
+
+
+
+ /* INHERIT AND INITIAL IN CSS : 
+ 
+ INIITIAL : THE MOST DEFULT VALUE OF THAT PRP 
+ INITIAL COLOR IS BLACK FOR EXAMPLE 
+ YOU CAN USE INITIAL INSTEAD OF UNSET AND NONE SOMEETIMES 
+ 
+ INHERIT : THE VALUE SETTED FOR THE PARENT IS SETTED FOR THE CHILD TOO
+ MEANS THAT WHEN YOU FOR EXMAPLE SET BORDER TO THE PARENT 1PX SOLID BLACK
+ AND YOU SAY THE CHILDs BORDER SHOULD BE INHERIT , IT SEARCHES FOR THE SAME PROPERTY IN THE PARENT ELEMENT AND SETS THE VALUE
+ 
+ */
+
+ /* HOST AND LOCAL ? use google inspector
+ css reset */   
+
+ /* IMPORTANT : always write the cleanest and the shortest code 
+ use shorthands and learn them 
+ write less code  */
+
+ /* DIFFERENCE BETWEEN DOING THE PROJECT AND PRODUCING THE PROJECT :
+ 
+ when doing the project , the loading speed aint important so we use different files for different parts of the web for example for the sidebar
+ or the footer or header or the css reset 
+ 
+ but when we want to give the project to the customer , it is important to copy and paste all of the codes in one file .
+ for example , when doing the project write the cssreset in another file for clean-being
+  but when giving it to the customer you have to copy paste the cssreset code and other css codes to only ONE css file  */
+
+ /* HOW TO USE CSS RESET : 
+ 
+ you have to either copy the reset code and paste it into your css file OR just download the css reset file */
+
+
+ /* HOW TO COMPILE CSS AND MINIFY THEM : 
+ 
+ when you do this , the speed increases in your webiste
+
+ as i said , you have to copy paste all of other codes into one particular file 
+ and in that file , you have to minify the css code so that it removes all the useless spaces and etc
+
+ how you do it is just : 
+
+ copy all of the code and paste it into a css minifier in the internet 
+
+ it gives you the code , then paste that code into your file
+ 
+ */
+ /* STEP BY STEP : 
+ 1. download css reset and put it in another file 
+ and do all of the nav and sidebar etc codes in another files for clean-being 
+ 2. after the project is ready , remove all of the "IMPORT" tags and and paste those css reset and stuff into ONE file 
+ (this is the same for js and others too) 
+ 3. minify that code in websites and copy paste to file 
+ */
+
+ /* NOTE : THIS IS FOR THE BEGINNERS YOU WILL LEARN (IF DIDNT , SEARCH FOR IT ) HOW TO USE GALP AND IT WILL TO ALL OF IT FOR YOU  */
+ /* USE AND LEARN CDN */
+
+
+
+
+
+/* ATTENTION !!!!! :
+ GRID SYSTEM IN CSS : 
+
+THE GRID SYSTEM SAYS THAT THE WEB PAGE CAN BE SPLITED TO 12 COLs
+
+EACH OF THESE COLs HAVE THE WIDTH OF 8.33% OF THEIR PARENT ELMENT 
+(100% (THE WIDTH OF THE PARENT) DIVIDED BY 12 THE COLs)
+
+
+THESE COLS CAN BE USED WHEN THE CONTAINER IS THE HTML ITSELF , OR WHEN YOU HAVE ANOTHER CONTAINER FOR ALL THE MAIN CONTENT , ITS THE SAME
+
+THERE ARE SPACES BETWEEN THE COLS , OFC . 
+
+SO WHEN YOU DREW THE COLS IN THE PAGE IN PAINT APP OR ELSE , YOU SHOULD PUT YOUR CONTENT THERE AND SEE HOW MANY COLS THEY FILL
+
+COL 1 8 33
+2 16 66 
+3 25 
+AND SO ON 
+
+SO WHEN YOU GOT A HEADER THAT FILLS THE WHOLE 12 COLS , THE WIDTH IS 100%
+
+NOW LISTEN , YOU DONT GIVE THE HEADER DIRECTLY THE WIDTH OF 100% 
+
+YOU SPECIFY CLASSES WITH THOSE WIDTHS AND USE THOSE CLASSES 
+
+
+
+SO LETS DO IT 
+col-xs-1 : 8.33%
+col-xs-2 : 16.66%
+col-xs-3 : 25%
+and all of it till 12
+
+
+SO THE STRUCTURE IS : 
+
+col - the size of the device that we specify the range of px with media queries(extra small xs - small s - medium md - large l - extra large xl) - how many cols that element fills
+(these are classes and we give these to the element but before that , we have to specify the range of the xs and etc with media queries)
+
+HOW TO USE MEDIA QUERIES TO RANGE THE PX OF THE XS AND ETC IN CSS : 
+FOR EXTRA SMALL (XS) : 
+@media only screen and (max-width : 600px){
+
+   col-xs-1 : 8.33%
+}
+
+NOTE : WE TAKE THE PX AMOUNT (MAX-WIDTH : 600PX)
+FROM THE GOOGLE AND WE MOSTLY USE THE BOOTSTRAP 4 NUMBERS 
+
+
+*/
+
+
+
+
+
+
+ /* col s 5 
+ 
+ if you give this class to an element 
+ 
+ that element fils 5 cols of the container when the device is small 
+
+ col xs 2
+ if the device is xs then the element will fill 2 cols of the container 
+ */
+ /* CONTINUE WITH THE GRID SYSTEM : 
+ 
+ 
+ we also need rows in order to specify whether we want the next content drop to the next line or not 
+ 
+ COL WAS TOP TO BOTTOM 
+ 
+ ROW IS RIGHT TO LEFT 
+ 
+ for every each 12 col , we have one ROW .
+ 
+ for example : if we have a sidebar whwich fills 3 cols and a content which fills 
+ 9 cols , the 12 cols are filled and now the SIDEBAR AND THE CONTENT ARE IN A ROW .
+
+ NOTE : ROW HAS A CLASS AND HAS PRPs
+ the prps are : 
+
+ row::after{
+   content empty 
+   clear both 
+   display table
+ }
+
+ so now , when we had a row container and a 12 col (can also be under 12) elements , we have to positiion the dropped element to the top ,
+ , so that they are next to each other .
+
+ we should give FLOAR RIGHT (beccause its persian its right) TO ALL OF THE ELEMENTS IN A ROW
+ SO WHEN WE BASICALLY HAVE A CONTAINER , WE SHOULD HAVE ROW CONTAINERS INSIDE OF IT FOR ROWS
+SO LITERALLY , WE SHOULD GIVE FLOAT RIGHT TO ALL OFF THE ELEMENTS IN THE CONTAINER SO THAT THEY ARE NEXT TO EACH OTHER
+SHORTHAND
+[class ^=col-]{
+   float right
+}
+
+every element that their class starts with COL- has the float right
+
+BUT 
+
+NOW THERE IS NO SPACE BETWEEN THE ELEMENTS . 
+
+you sometimes see that there is some space in my sites . 
+how to do that : !@!@!@
+WE CAN GIVE PADDING LEFT AND RIGHT TO THE PARENT ELEMENT (THE ROW )
+NOTE : USUALLY THE SPACE BETWEEN THOSE WHICH ARE NAMED GUTTERS , ARE 15PX FROM RIGHT AND LEFT
+ */
+
+ @media screen and (max-width: 600px){
+   .col-xs-1 {
+      width: 8.33%;
+   }
+   .col-xs-2 {
+      width: 16.66%;
+   }
+  
+   .col-xs-3 {
+      width: 25%;
+   }
+   .col-xs-4 {
+      width: 33.32%;
+   }
+   .col-xs-5 {
+      width: 41.5%;
+   }
+   .col-xs-6 {
+      width: 50%;
+   }
+   .col-xs-7 {
+      width: 58.31%;
+   }
+   .col-xs-8 {
+      width: 66.64%;
+   }
+   .col-xs-9 {
+      width: 75%;
+   }
+   .col-xs-10 {
+      width: 83.3%;
+   }
+   .col-xs-11 {
+      width: 91.3%;
+   }
+   .col-xs-12 {
+      width: 100%;
+   }
+ }
+
+ @media screen and (min-width:600px){
+
+   .col-s-1 {
+      width: 8.33%;
+   }
+   .col-s-2 {
+      width: 16.66%;
+   }
+  
+   .col-s-3 {
+      width: 25%;
+   }
+   .col-s-4 {
+      width: 33.32%;
+   }
+   .col-s-5 {
+      width: 41.5%;
+   }
+   .col-s-6 {
+      width: 50%;
+   }
+   .col-s-7 {
+      width: 58.31%;
+   }
+   .col-s-8 {
+      width: 66.64%;
+   }
+   .col-s-9 {
+      width: 75%;
+   }
+   .col-s-10 {
+      width: 83.3%;
+   }
+   .col-s-11 {
+      width: 91.3%;
+   }
+   .col-s-12 {
+      width: 100%;
+   }
+ }
+
+ @media screen and (min-width:768px){
+
+   .col-md-1 {
+      width: 8.33%;
+   }
+   .col-md-2 {
+      width: 16.66%;
+   }
+  
+   .col-md-3 {
+      width: 25%;
+   }
+   .col-md-4 {
+      width: 33.32%;
+   }
+   .col-md-5 {
+      width: 41.5%;
+   }
+   .col-md-6 {
+      width: 50%;
+   }
+   .col-md-7 {
+      width: 58.31%;
+   }
+   .col-md-8 {
+      width: 66.64%;
+   }
+   .col-md-9 {
+      width: 75%;
+   }
+   .col-md-10 {
+      width: 83.3%;
+   }
+   .col-md-11 {
+      width: 91.3%;
+   }
+   .col-md-12 {
+      width: 100%;
+   }
+ }
+ .gray-color{
+   background-color: gray;
+  
+ }
+
+@media screen and (min-width:992px){
+
+   .col-l-1 {
+      width: 8.33%;
+   }
+   .col-l-2 {
+      width: 16.66%;
+   }
+  
+   .col-l-3 {
+      width: 25%;
+   }
+   .col-l-4 {
+      width: 33.32%;
+   }
+   .col-l-5 {
+      width: 41.5%;
+   }
+   .col-l-6 {
+      width: 50%;
+   }
+   .col-l-7 {
+      width: 58.31%;
+   }
+   .coll-8 {
+      width: 66.64%;
+   }
+   .col-l-9 {
+      width: 75%;
+   }
+   .col-l-10 {
+      width: 83.3%;
+   }
+   .col-l-11 {
+      width: 91.3%;
+   }
+   .col-l-12 {
+      width: 100%;
+   }
+}
+@media screen and (min-width : 1200px){
+   .col-xl-1 {
+      width: 8.33%;
+   }
+   .col-xl-2 {
+      width: 16.66%;
+   }
+  
+   .col-xl-3 {
+      width: 25%;
+   }
+   .col-xl-4 {
+      width: 33.32%;
+   }
+   .col-xl-5 {
+      width: 41.5%;
+   }
+   .col-xl-6 {
+      width: 50%;
+   }
+   .col-xl-7 {
+      width: 58.31%;
+   }
+   .col-xl-8 {
+      width: 66.64%;
+   }
+   .col-xl-9 {
+      width: 75%;
+   }
+   .col-xl-10 {
+      width: 83.3%;
+   }
+   .col-xl-11 {
+      width: 91.3%;
+   }
+   .col-xl-12 {
+      width: 100%;
+   }
+}
+
+
+
+#grid-system-test{
+   background-color: red;
+   color: white;
+}
+
+
+/* learn float and clear */
+
+
+
+/* DIFFERENCE BETWEEN CLEARFIX AND OVERFLOW : 
+
+when you float an image to right or to the left , and you put some text there , 
+you see some problem that when you give the whole container some border , 
+the floated img will overflow out of the container and the border 
+
+
+to fix this , (and keep the text wrapping aroud the floated img ) 
+
+use overflow auto 
+
+so now the floated img is inside the container and the border completely
+
+
+BUT FOR SOME REASON YOU WANT THE TEXT TO NOT WRAP AROUND THE IMG ANYWAY AND YOU WANT IT TO THROW TO THE NEXT LINE /
+
+WELL NOW YOU MIGHT SAY TO NOT TO GIVE THE IMG A FLOT , 
+BUT YOU ARE WRONG . 
+
+BECAUSE IF YOU DONT GIVE THE IMG THE FLOAT PRP , THE TEXT WILL A LITTLE BIT WRAP AROUND THE IMG AND ITS ANNOYING 
+
+SO NOW WHAT YOU SHOULD DO IS : 
+
+GIVE THE RIGHT OR LEFT OR BOTH CLEAR TO THE TEXR 
+
+
+so overflow auto is for : 
+
+fixing the floated img overflowing out of the border
+
+but clear is for : 
+
+dropping the text or whatever element it is off the img so the img is alone in its line
+*/
+
+
+
+/* listen to the float course again and learn 
+ */
+
+ /* DISPLAY TABLE IN CSS :
+ 
+   when you set the containers displa to table , it treats everything like a table row EVEN white spaces 
+   
+
+   so when it does , element baadi miofte line paeni va jelo on yaro nemiofte 
+
+   bayad be parent dade she
+ */
+
+
+
+   /* ta ertefa akse mate miad badesh miofte paein */
+
+
+   /* NEW THINGS LEARNT ABOUT FLOAT : 
+   
+   when you want to positon your images next to each other like an img gallery ,
+   first you have to put each img in a div
+   and then give all of them float right or left
+
+  next you have to divide 100 to how many those pics are 
+   
+the number you got is the width of the every div you putted those images in .
+
+and then set width 100% for each IMAGES THEMSELVES
+
+for example : 
+
+if you have 2 pics 
+100/2 : 50 
+div width 50%
+img width 100%
+
+now the div of the img has for example 50% of the doc (the natural size of the pic and its white spaces) ,
+
+and you give the img the width of 100% , the img fills that 50% of its parent 
+
+so now there is no white space*/
+
+
+/* container is always the center of the page
+max width of the container is always the same as the xl amount of px is the media queries 
+so here its 
+container max width 1200px */
+[class ^="col-"]{
+   float: right;
+   
+;
+ /* margin-right: -15px;
+
+ margin-left: -15px;
+padding: 0 15px !important; */
+/* padding: 0 15px !important; */
+
+ box-sizing: border-box;
+}
+.row::after{
+   content: '';
+   /* float: left; */
+   display: table;
+   /* padding-left: 15px;
+   padding-right: 15px; */
+   clear: both;
+
+}
+.sidebar-grid-system{
+background-color: blue;
+}
+.content-grid-system{
+   background-color: red;
+}
+.container{
+   max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ITS BETTER FOR THE ELEMENTS IN A CONTAINER TO HAVE SOME SPACE TILL THE CONTAINER SO THAT THE BGCOLOR OF THE CONTAINER IS SEEABLE
+THE STANDARD IS 15PX RIGHT AND LEFT : 
+1. MARGIN RIGHT AND LEFT 15PX TO THE INSIDE ELEMENT
+2. PADDING RIGHT AND LEFT 15PX TO THE PARENT ELEMENT */
+/* .parent-struggle{
+  margin: 0 15px;
+} */
+
+
+/* GUTTERS IN CSS GRID SYSTEM : 
+
+if you want to specify gutters , you have to put every content that you want in a container . 
+and you have to give that container the grid classes 
+then , you have to give padding to the container that we said 
+for example : 
+
+we want to add our team members to our website 
+each of them takes 4 cols , so we have 3 team members .
+TO START OF WITH , WE CREATE A DIV AND WE SPECIFY OUR GRID CLASSES FOR THEM (COL-XS-12 ETC)
+THEN , INSIDE OF THAT DIV WE PUT THE ACTUAL CONTENT THAT WE WANT TO DISPLAY ON OUR WEB PAGE
+WE DO IT FOR 3 TIMES (DONT FORGET TO ADD THE COL-MD/L/XL-4 BECAUSE WE SAID EACH OF THEM TAKE 4 COLS)
+NOW WE GIVE PADDING TO EACH OF THE CONTAINERS THAT WE SPECIFIED FOR EACH OF THE TEAM MEMEBERS (FIRST)
+
+NOTE: if you want to specify bgc for the content inside of that div , be careful to give the bgc to the content inside and not to the container that contains the content 
+
+
+*/
+
+.sidebar,.content{
+
+/* margin: 0 1rem; for the layout you can if you want */
+}
+@media screen and (max-width:767px){
+   .sidebar,.content{
+      margin: 15px 1rem;
+   }
+}
+
+
+.parent-content1,.parent-content2{
+ float: left;
+}
+.content1{
+   background-color: red;
+   margin-right: 1rem;
+   margin-left: 1rem;
+
+}
+.content2{
+   background-color: blue;
+   margin-right: 1rem;
+   margin-left: 1rem;
+ 
+}
+/* motheghaier haie global  */
+
+
+/* padding is given to the parent 
+
+
+1. Padding on parent elements for gutter between its edges and its children.
+
+2. Margin to seperate elements with the same parent from each other.*/
+
+
+
+.box-test1{
+
+   float: left;
+   padding: 0 50px;
+   display: block;
+}
+.box-test2{
+
+padding: 0 50px;
+   float: left;
+   display: block;
+}
+.box-test1 p , .box-test2 p{
+   background-color: red;
+}
+
+
+
+/* there are notes in practice css . copy paste it here */
+
+
+/* OFFSETS IN GRID SYSTEM : (LEARN ABOUT IT MORE )
+
+IF YOU DONT WANT TO FILL THTE 12 COL ,FOR EXAMPLE YOU WANT TO ONLY HAVE A  6 COL ELEMENT ,
+
+BUT 
+YOU WANT THAT 6 COL ELEMENT TO BE PLACED IN THE MIDDLE , YOU NEED TO USE OFFSETS .
+
+
+
+HOW OFFSETS WORK : 
+
+THEY ARE CLASSSES JUST LIKE GRID CLASSES 
+
+THEY USE MARGINS , AND BECAUSE WE SPEAK PERSIAN , WE USE MARGIN RIGHT 
+BUT ENGLISH PEOPLE USE MARGIN LEFT (IF YOU HAD ANY ENGLISH LANGUAGE PROJECT )
+
+WE SET OFFSETS 0 T0 12 (THE REASON WE HAVE 0 TOO IS EXPLAINED AT THE END)
+AND WE SET IT FOR DIFFERENT SIZES (XS-S-MD ETC)
+SO ITS LIKE
+COL-XS-OFFFSET-0 {
+   MARGIN-RIGHT/LEFT : THE NORMAL VALUE WE SET BY THE NUMBER IN GRID CLASSES  (1 = 8.33 AND ETC)
+
+}
+
+NOTE : WE USE THE OFFSET CLASSES IN THE SAME MEDIA QUERIES LIKE IF ITS col-XS-offset-7
+WE PUT IT IN THE XS MEDIA QUERIES 
+
+
+this means that in the extra small size , i want to have an offset of 12 which we are going to explain
+
+YOUR OFFSET DEPENDS ON WHAT YOU HAVE SET (IN GRID CLASSES) FOR THE ELEMENT IN THAT SIZE (SIZE = XS-S-MD ETC)
+SO IN THIS EXAMPLE , LETS SAY WE SET THE NORMAL GRID CLASSES IN THE XS SIZE AS 6 
+MEANS ---> col-xs-6
+
+IF WE WANT TO COMPLETELY MOVE THE ELEMENT TO THE OTHER SIDE , OUR TOTAL NUMBERS SHOULD BE 12 (BECAUSE GRID SYSTEM IS 12 COL)
+SO THEN WE HAVE THE COL-XS-6 , WE HAVE TO SET COL-XS-OFFSET-6 
+6+6 = 12
+SO THE ELEMENT WILL COMPLETELY MOVE TO THE OTHER SIDE 
+
+BUT , IF WE WANT TO KEEP IT IN THE CENTER WE HAVE TO DIVIDE THAT NORMAL GRID NUMBER BY 2
+
+6/2 = 3
+COL-XS-OFFSET-3
+
+HOW TO NOT LET IT AFFECT OTHER ELEMENTS IN DIFFERENT SIZES
+
+
+NOTE : THE REASON WE HAVE 0 TOO , IS BECAUSE WHEN WE SET AN OFFSET IN FOR EXAMPLE THE XS SIZE , THE OFFSET AFFECTS OTHER SIZES , LIKE MD ETC
+AND WE SHOULD SET COL-MD/ETC-OFFSET-0 FOR THEM TO GET BACK TO NORMAL
+
+
+ATTENTION !!@!@!@ SO, HOW TO YOU CACLCULATE THE OFFSETS ? 
+FORGET THE CALCULATION THAT WE HAVE EXPLAINED , THIS IS TRUE .
+
+FIRST YOU HAVE TO BE CAREFUL THAT THE COLS OF THE NORMAL GRID SYSTEM ARE EVEN NUMBERS (ZOJ 2,4,6,8,10)
+ FOR EXAMPLE  : 
+
+ COL-MD-8 
+
+ 1. YOU SPECIFY HOW MANY COLS ARE LEFT , NOW THERE ARE 4 COLS LEFT (CAN BE DONE LIKE THS TOO --> 12-8 = 4)
+ 2. THEN , YOU DIVIDE THAT NUMBER BY TWO , SO THAT YOU CAN HAVE THEM IN BOTH SIDES 
+ 3. THE NUMBER NOW YOU HAVE IS THE OFFSET NUMBER FOR CENTERING YOUR ELEMENT 
+
+ NOTE : THIS WAS FOR CENTERING YOUR ELEMENT , IF YOU WANT TO COMPLETELY MOVE IT THAT WAY , THE EXPLANATION OF THE TOTAL SHOULD BE 12 IS STILL TRUE
+
+WORK ON THEM , AND LEARN THEM COMPLETELY . 
+
+LEARN ABOUT WIREFRAME
+
+*/
+/* DONT FORGET TO SET THE OFFSET CLASSES  */
+
+
+
+/* UTILITY CLASSES : 
+
+when you are using a prp many times in your project , you can create a class with that prp and give it to the elements you want
+
+if you want to set a specific bgcolor many times you can set a class and give it to the element 
+
+
+NOTE : DONT FORGET TO USE THESE UTILITY CLASSES
+.red-color{
+   bgcolor red
+}*/
+
+
+/* RESPONSIVE IMAGES : 
+
+YOU WILL HAVE A UTILITY CLASS NAMED IMG-RESPONSIVE AND THE PRPS OF WIDTH 100% HEIGHT AUTO 
+AND GIVE IT TO EVERY IMG YOU HAVE*/
+
+
+
+/* NESTING IN GRID SYSTEM : 
+
+YOU CAN HAVE  AGAIN  12 cols inside of the div or else that has cols its slef
+how : 
+
+when you have a div or eles that has its own grid system , you can have many divs inside of them that have those grid systems too
+
+for example  : 
+
+
+
+
+div  col md 5 
+(this one is the child of the upper parent >) div col md 7
+
+in the example above , you might say that how can a 7 col be inside of a 5 col ? 
+
+well , lemme explain : 
+
+it doesnt matter what we set as the number of the col for the parent ,when we want to add another grid system as its child , 
+
+it becomes 12 cols but less width . 
+
+so in its child , we can have up to 12 cols 
+*/
+
+/* DONT FORGET THAT YOU HAVE TO GIVE THE BGCOLOR AND THE BORDER TO THE 'INSIDE ELEMENT '
+
+*/
+
+/* BE CAREFUL ABOUT IF THERE IS SMTH OUTSIDE OF THE CONTAINER AND HAS ITS OWN CONTAINER  */
+
+
+/* read and work on the structure of the grid sytem (why you should put div with the grid classes as parent)
+ *
+ /
+ /* maybe it was nested rows */
+
+ /* learn to create terminalogies in website like sidebar  nav and etc  login dashbord*/
+
+ /* learn to style buttons like checkbox and inputs and etc  */
+
+ .transform{
+   height: 200px;
+   width: 300px;
+   background-color: red;
+ margin-left: 300px; 
+ /* border-radius: 100%; */
+transform: scale(2)  rotate(45deg);
+border-left: 1px solid blue;
+transform-origin: 50px 70px;
+
+
+
+   
+ }
+ .transform:hover{
+   /* transform: scale(1.1);
+   transition: 0.3s; */
+
+ }
+
+
+ /* ANIMATIONS IN CSS : 
+ 
+ animations in css are really essensial 
+ they can be used in many ways
+transform , transition , keyframes/animations
+ that when you combine them to each other , 
+you can create cool animated elements 
+
+
+TRANSFORM IN CSS :
+
+transform is a status changer . 
+
+there are many properties and values for this . 
+
+translate : 
+WE USED IT FOR LITERALLY GIVING SPACE OF OUTER ELEMENTS FOR VERTICALLY CENTERING EKEMENTS
+the translate value itself , is a combine between the two prps of translateY and translateX
+so the first value it gets , is margin-left 
+the second it gets , is margin-bottom (im not quite sure)
+and it can get negative values , for example ifthe first value is negative , it will be margin-right
+
+scale : 
+
+JUST LIKE ROTATE , THIS HAS MANY TYPES LIKE SCALEX SCALEY SCALEZ
+SCALEZ DOESNT WORK 
+SCALE X ONLY 2 TIMESes THE WIDTH 
+SCALE Y "                 " HEIGHT
+AND THERE IS , (2,1) THE FIRST ONE IS THE X AND THE SECOUND ONE IS THE Y
+
+CONTAINS A NUMBER VALUE WHICH SAYS HOW MANY TIMES THE ELEMENT GETS BIGGER 
+THIS IS MOSTLY USED IN HOVERING 
+
+NOTE : YOU CAN WRITE THESE WITH EACH OTHER BY WRITING THEM NEXT TO EACH OTHER 
+FOR EXAMPLE : 
+TRANSFORM : TRANSLATE () SCALE (); 
+
+rotate : 
+CHANGES THE WHOLE SHAPEs DEGREE AND ROTATES IT ,NOT THE اضلاع
+IT JUST ROTATES THE ELEMENT WITH THE VALUE OF DEGREE 
+YOU CAN WORK WITH IT IN THE BROWSER DEV TOOLS
+THERE ARE 3 TYPES OF NEEDED ROTATES : 
+rotate has negative values too
+1. rotateX : CHANGES THE ELEMENT BASED ON THE X AXIS (------)
+2. rotateY : "                             " Y AXIS (||||)
+NOTE: IN THE Y AND X AXIS ITS LIKE 3D AND STUFF SO WE CANT SEE WHATS HAPPENING THERE THATS THE ELEMENT GETS SMALLER 
+THE ELEMENT LITERALLY WRAPS AROUND THE AXIS AND WE CANT SEE THE 3Ded PART
+3. rotateZ : THERE IS A Z AXIS , WHICH IS LITERALLY WHAT WE NORMALLY SEE (//) ITS LIKE SHIB AND ITS FOR NORMAL ROTATING
+
+NORMAL ROTATE IS THE Z AXIS
+
+skew : 
+THIS ONE IS THE SAME AS ROTATE , BUT CHANGES THE DEGREE AND THE ROTATE OF THE اضلاع
+IT LITERALLY MAKES THE اضلاع HAVE SOME ROTATE , NOT THE WHOLE SHAPE
+THE NORMAL SKEW , IS JUST THE SAME AS SKEW X 
+
+
+SO BASICALLY HOW IT WORKS IS , WHAT EVER AXIS WE SPECIFY , عمود اون محور میشه ضلعی که تغییر میکنه
+SO LIKE IF WE PUT SKEW X , THE WIDTH WILL CHANGE
+Y , THE HEIGHT WILL CHANGE 
+
+
+matrix : its literally a combine of all these things
+*/
+
+/* TRANSFORM ORIGIN IN CSS ::after
+its literally for moving elements who are having the transform prp
+the difference between this and translate is, the X an Y axis here are changed based on how the shape is
+for example , you have to look at your shape before you even give it some transform
+you have to look and say : 
+which sides are the Y sides
+which sides are the X sides
+and then , afte you gave it the transform , the Y and X is not the same.
+i mean their lines are not the same , but they are  stil remained in sides
+and still the X and Y axis are those sides
+
+AND THE TRANSFORM ORIGIN MOVES THE ELEMENT BASED ON THOSE X AND Y AXIS*/
+
+
+/* TRANSFORM ORIGIN IN CSS : 
+THIS PRP , SPECIFIRES , WHERE WE WANT TO PUT OUR CENTER TO ROTATE
+FOR EXAMPLE : 
+WHEN YOU ARE ROTATING AN ELEMENT OR A SHAPE FOR 45 DEGREEs , THE CENTER OF THE ROTATE IS CENTER
+SO THE CENTER IS STABLE 
+ALSO , TRANSFORM ORIGIN , HAS NOTHING TO DO WITH MOVING THE SHAPE ETC(IT CAN HELP THAT WAY BUT ITS NOT MEANT TO BE USED LIKE THAT)
+SO WITH THIS PRP , YOU SPECIFY WHERE THE CENTER IS 
+IF YOU WANT THE CENTER OF THE ROTATE TO BE TOP RIGHT . THE VALUE OF THE TRANSFORM-ORIGIN WILL BE TOP RIGHT
+IF YOU WANT IT TO BE A SIDE FOR EXAMPLE THE RIGHT SIDE , LEFT SIDE , TOP SIDE, BOTTOM SIDE , YOU CAN JUST SAY RIGHT,LEFT ETC
+
+AND WITH LENGTH VALUES , YOU SPECIFY exactly WHERE YOU WANT THE CENTER TO BE 
+SO FOR EXAMPLE IF YOU SAY 50PX 70PX (THE FIRST VALUE IS FOR X AAXIS AND SECOND ONE IS THE Y AXIS)
+THE CENTER OF THAT ROTATE , WILL BE PLACED 50PX 70PX FURTHER FROM THE ACTUAL CENTER AND 
+
+THATS WHY THE SHAPE OR THE ELEMENT MOVES */
+
+
+/* PERSPECTIVE IN CSS : 
+
+ITS USED FOR DISPLAYING 3D ANIMTAION STUFF
+
+WHAT YOU HAVE TO DO IS :
+
+you have to create a parent that has a child
+for the parent , give the prp perspective with the value of --------
+then , for the child give the transform style to preserve-3d
+
+
+you can also give position relative to the parent and aboslute to the choild for centering orother stuff
+
+
+and there is also 
+
+PERSPECTIVE ORIGIN : 
+IT LITERALLY SPECIFIRES THE DIRECITON OF ELEMENTS HEAD*/
+
+
+/* BACKFACE-VISIBILITY PRP : 
+WHEN YOU ARE ROTATING AN ELEMENT FOR 180DEG ,YOU WLL MOST LIKELY SEE THE BACK OF THE ELEMENT
+EVEN THE TEXT GETS REVERSED . 
+
+SO BACKFACE VISIBILITY IS USED FOR MOSTLY FLIP CARDS (WHEN YOU HOVER OVER THEM , THEIR BACK BECOMES VISIBLE)
+
+BUT THE NORMAL USAGE OF BACKFACE-VISIBLITY IS FOR MAKING BACK OF THE ELEMENT (WHEN ROTATING) HIDDEN OR VISIBLE
+*/
+
+
+/* TRANSITION IN CSS : 
+
+YOU CAN CREATE COOL ANIMATIONS WITH TRANSITIONS
+TRANSITIONS SPECIFY THE DELAY BETWEEN (MOSTLY HOVERING) ELEMENTS
+ WE USED TO WRITE TRANSITIONS IN SHORTHAND , BUT THERE IS SO MUCH MORE TO KNOW 
+   
+
+
+ TRANSITION HAS GOT MANY PROPERTIES FOR ITSELF : 
+
+ 1. TRANSITION DURATION (NECESSARY) :
+ specifies how many secounds or mss the transition effect lasts
+
+ 2. TRANSITION PROPERTY (NECESSARY) :
+this one specifies what properties you want the transition property to work for
+
+for example : 
+lets say you have some styles for an element in normal(no hover)
+and , you have some styles in hover for that element
+like in normal you said bgcolor red and color white
+in hover you said bgcolor blue and color black
+
+but there are obviously also other properties in normal and also hover
+
+but , you only want the transition to work for bgcolor and not color
+like you want the bgcolor to have 1s delay when hovering but for color , you dont want transition for it and oyou want it to go t0 black immediately
+you WANT the color too to change but with no transition
+well then here  , in the transition property , you can just set background-color
+
+you WANT the color too to change but with no transition
+
+
+
+ 3. TRANSITION DELAY : 
+
+ you want the transition itself to have some delay too .
+ for example when you set this to 1s , when you hover on element , it takes 1s to apply the normal transition effect
+
+
+ 4. TRANSITION TIMING FUNCTION : 
+
+ with this one , you can style your own transitoin effect . 
+
+ maybe you want the end to last longer 
+ it has some keywords itself , but you can create yours with the cubic blah blah blah
+ you can also use the google inspector (dev tools)
+
+
+
+ NOTE: YOU SHOULD APPLY ALL OF THE TRANSITIONS TO THE NORMAL ELEMENT , NOT THE HOVER ONE
+ 
+ 
+TRANSITION SHORTHAND : 
+
+FIRST VALUE IS THE TRANSITION-PROPERTY (NECESSARY)
+SECOND ONE IS THE TRANSITION DURATION(NECESSARY)
+THIRD ONE IS THE TRANSITION-TIMING-FUNCTION
+FOURTH ONE IS THE TRANSITION DELAY
+ */
+.transition-hover-test{
+   height: 50px;
+   width: 50px;
+   background-color: red;
+   transition-property: transform;
+   transition-duration: 1s;
+   /* transition-delay: 2s; */
+   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+   /* margin-top: 0; */
+   margin-left: 100px;
+}
+.transition-hover-test:hover{
+  transform: scale(2);
+
+}
+.img-responsive{
+   height: auto;
+   width: 100%;
+}
+
+/* کمان و واریانس */
+.row-idk div img{
+border: 2px solid black;
+border-image: linear-gradient(to left,red,blue);
+border-image-slice: 10;
+transition: all 2s ;
+}
+.row-idk div img:hover{
+   transform: rotate(360deg);
+}
+
+/* clean code
+wender or render prefix */
+
+
+
+/* KEYFRAMES IN ANIMAITON IN CSS : 
+
+AS I TOLD YOU , ANOTHER WAY TO USE ANIMATIONS IS KEYFRAMES
+IN TRANSFORM AND TRANSITION , WE SET EXPRESSIONS RIGHT WE SAID IF THE USER HOVERS ON  THIS ELEMENT , THE COLOR WILL CHANGE FROM RED TO BLUE FOR EXAMPLE IN 2S
+
+
+BUT IN KEYFRAMES , WE DONT SET EXPRESSIONS . WE JUST SAY THE COLOR OF THE ELEMENT SHOULD GO FROM RED TO BLUE 
+
+THE SYNTAX : 
+we need the @keyframes and a name for that animation (the name is custom) @keyframes amir {}
+
+and then , when we open the bracket , there are 2 ways of using this keyframe
+1. from - to : 
+THIS ONE IS FOR TWO CHANGES 
+FOR EXMAPLE THE ELEMENT GOES FROM {BGCOLOR RED} TO {BGCOLOR BLUE}
+AS YOU CAN SEE ITS TWO CHANGES
+2. percentages : THIS ONE IS FOR MANY EXPRESSIONS LIKE FROM RED TO BLUE TO YELLOW ETC
+
+THE TIME WE SET (ANIMATION-DURATION WHICH WE WILL COVER) WILL GET SPLITED INTO THESE PERCENTAGES
+
+WE MOSTLY USE PERCENTAGES LIKE THIS : 
+
+AFTER THE BRACKET OPENS WE SET : 
+0%{BGCOLOR RED} (0% IS THE FIRST CHANGE)
+25% {BGCOLOR BLUE}
+50%
+75%
+100%
+NOTE : YOU CAN JUST SET 0 50 100 OR HOWEVER YOU LIKE TO
+
+SO FOR EXAMPLE IF WE SET THE ANIMATION DURATION TO 10S
+THE 0 PERCENT WILL BE 0S
+THE 25 P WILL BE 2.5 S
+AND SO ON
+
+
+
+so now lets cover animation properties : 
+
+animation : SHORTHAND FOR THESE BELOW
+animation-name : WE SET THE ANIMATON NAME THE SAME AS THE WORD WE SET AFTER KEYFRAME SO IT IT WAS @KEYFRAME AMIR {} NOW THE ANIMATION NAME IS AMIR
+animation-duration : YOU SET IN WHAT TIME THE ANIMATION COMPLETES
+animation iteration count : YOU SET HOW TIMES THE ANIMATION REPEATS (YOU CAN  ALSO SET INFINITE WHICH IS FOREVER)
+animation timing funciton : THE SAME AS THE TRANSITION ONE , YOU JUST CUSTOMIZE EFFECTS
+animation delay : IT JUST SPECIFIES HOW MANY SECOUNDS IT HAS TO WAIT BEFORE APPLYING THE ANIMATION
+animation direction : 
+animation play state : 
+animation fill mode
+
+@*/
+
+.first-animation{
+   height: 100px;
+   width: 100px;
+   background-color: red;
+   animation-name: first-animation
+   ;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-delay: 2s;
+   animation-direction: alternate;
+   animation-fill-mode: forwards;
+   animation-play-state: paused;
+}
+@keyframes first-animation{
+   from{background-color: red;}
+   to {background-color: blue;}
+}
+
+@keyframes second-animation{
+   0%{
+      background-color: red;
+   }
+   50%{
+      background-color: #525FE1;
+   }
+   80%{
+      background-color:#F86F03 ;
+   }
+   100%{
+      background-color:#FFA41B ;
+   }
+}
+.second-animation{
+   width: 200px;
+   height: 200px;
+   background-color: red;
+   animation-name: second-animation;
+   animation-duration: 0.1s;
+   animation-iteration-count: infinite;
+/* -webkit-animation-delay: 5s; */
+animation-direction: alternate;
+
+}
+@keyframes third-animation{
+   from{text-align: left;}
+   to{text-align: right;}
+
+}
+.third-animation{
+   height: 200px;
+   /* width: 200px; */
+   background-color: red;
+   animation-name: third-animation;
+   animation-duration: 2s;
+   
+position: absolute;
+   animation-direction: alternate;
+   animation-iteration-count: infinite;
+right: 0;
+width: 200px;
+
+}
+
+@keyframes third-animation{
+   from{
+  background-color: red;
+width: 200px;}
+   to{
+   background-color: blue;
+width: 250px;}
+
+}
+
+@keyframes border-bottom-animation{
+   from{width: 100px;}
+   to{width: 200px;}
+}
+.border-bottom-animation{
+   /* border: none; */
+   animation-name: border-bottom-animation;
+   animation-duration: 1s;
+   animation-iteration-count: 10;
+   animation-direction: alternate;
+   /* animation-timing-function: linear; */
+   transition-property: all;
+   transition-duration: 2s;
+   animation-fill-mode: backwards;
+   transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+   margin-bottom: 200px;
+   
+}
+
+.moving{
+   width: 100px;
+   height: 100px;
+   background-color: #F86F03;
+   animation-name: moving;
+   animation-duration: 5s;
+   position: relative;
+   animation-iteration-count: infinite;
+}
+@keyframes moving{
+  0%{
+   left: 0;
+   top: 0;
+  }
+   25%{
+   left: 0;
+   top: 200px;
+  }
+  50%{
+   right: 200px;
+   top: 200px;
+  }
+  75%{right: 200px;
+top: 0;}
+100%{
+   left: 0
+   ;
+   top: 0;
+}
+}
+
+
+/* look at webites and learn their design
+
+work more on animations*/
+
+
+
+/* LOADING IN CSS : 
+
+its just rotating and you have to control it with animations 
+
+it has a normal border like 12px solid black
+and then , to give color toa the other side of the border , you can choose between bordre left right top bottom
+
+it obviously has border-radius
+
+
+inside of the keyframe you just say that transform from 0deg
+to 360deg*/
+
+
+
+/* learn all the components of the website and pracitce them
+
+first html and after that css
+
+components really help and they help you speed up the project so have them 
+
+they dont mention in their caption what they are about to explain
+
+GitHub Theme:
+
+SynthWave ‘84:
+
+Palenight:
+
+in tutorials , talk about what things they can set themselves and its cutsom */
+
+
+
+/* HOW TO LET AN ELEMENT FILL THE ENTIRE PAGE FROM HEIGHT : 
+
+THERE ARE TWO WAYS : 
+
+1. HEIGHT 100% AND HTML,BODY HEIGHT 100%
+ 2. SETTING HEIGHT 100VH*/
+
+
+
+/* analysse the project a little bit so (before the project)
+for example say 
+ok we need header here 
+this style that style
+
+
+ /* CREATING MOVING CARS BY USING CSS ANIMATIONS:
+ 
+ FIRST , YOU HAVE TO UNDERSTAND A FEW THINGS 
+ 
+ 1. WHEN WE ARE DRIVING ON A ROAD*/
+
+/*when they hover the mouse on the car , make the animaton duration less dso that the car is faster */

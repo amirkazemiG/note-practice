@@ -1,0 +1,121 @@
+ /* CREATING MOVING CARS BY USING CSS ANIMATIONS:
+ 
+ FIRST , YOU HAVE TO UNDERSTAND A FEW THINGS 
+ 
+ 1. WHEN WE ARE DRIVING ON A ROAD , THERE IS A DELUSION THAT THE ROAD/CITY AND BUILDINGS ARE MOVING OPPOSITE OF US.
+ ITS NOT ACTUALLY LIKE THAT , WE ARE MOVIN , BUT
+ WE HAVE TO ACTUALLY MAKE THE ROAD AND THE CITY OR BUILDINGS 
+ 
+ 2. IN THIS TYPE OF PROJECT , WE USE BACKGROUND IMAGE INSTEAD OF THE IMG ITSELF (MIGHT WORK BUT IDK)
+ 
+ 3. FOR THE ROAD/CITY AND BUILDINGS TO MOVE, WE USE ANIMATIONS AND TRANSFORM TRANSLATE , BUT BECAUSE ITS A "Y" AXIS 
+ WE USE TRANSLATEY AND THEY ARE MOVING THE OPPOSITE OF US , THEN ITS A NEGATIVE VALUE
+
+ 4. YOU HAVE TO USE ABOVE 100% WIDTH OF THEM TO CONTINUE AND KEEP GOING
+ 
+ 5. WE DONT USE BGIMAGES FOR CARS, AND THE REASON IS IT SHOULD HAVE A STABLE WIDTH AND HEIGHT
+ WE PUT THEM INSIDE OF A PARENT ELEMENT, WE GIVE STABLE WIDTH AND HEIGHT TO THE PARENT ELEMENT AND THE WIDTH OF 100% TO THE IMG SO THAT IT FILLS THE WHOLE PARENT ELEMENT
+ 6. FOR MOVING THE WHEELS WE USE ROTATE Z (AINT SURE ABOUT THE Z OR Y OR X BUT I THINK ITS Z) 
+ 7. IN ORDER TO HAVE DASTANDAZ'd YOU NEED THE TRANSLATE Y IN PERCENTAGES FOR THE CAR ITSELF
+ ,*/
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+overflow: hidden;
+}
+.the-sky{
+  background-image: url(sky.jpg);
+  width: 100%;
+height: 100%;
+position: relative;
+}
+body,html{
+  height: 100%;
+}
+.road{
+  position: absolute;
+  height: 200px;
+  width: 500%;
+  background-image: url(road.jpg);
+  background-repeat: repeat;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: road 3s linear infinite ;
+ 
+}
+@keyframes road{
+  to{
+    transform: translateX(-4000px);
+  }
+}
+.city{
+  position: absolute;
+  height: 200px;
+  width: 500%;
+  background-image: url(city.png);
+  background-repeat: repeat-x;
+top: 225px;
+animation: city 8s linear infinite;
+ 
+}
+@keyframes city{
+  to{
+    transform: translateX(-4000px);
+  }}
+  .car{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translate(-50%);
+  }
+  .car-itself{
+  width: 100%;
+  animation: moving-up-down 1s linear infinite;
+  }
+  @keyframes moving-up-down{
+    50%{
+      transform: translateY(2px);
+
+    }
+    100%{
+      transform: translateY(-2px);
+    }
+  }
+  [class *="wheel"]{
+    position: absolute;
+    top: 110px;
+    height:85px;
+    width: 85px;
+    animation: wheel-rotate 2s linear infinite;
+  }
+  .wheel1{
+    left: 46px;
+   
+  }
+  .wheel2{
+    left:352px;
+  }
+  @keyframes wheel-rotate{
+    to{
+      transform: rotateZ(360deg);
+    }
+  }
+
+
+
+  /*we specify the height of 100% or 100vh for the sky
+  then because our cars and city and road etc look like they are inside of the sky in the screen , other elements will be inside of the sky
+  road and city its going to have width or 500 percent because we dont want it to stop 
+ and all of others inside of the sky ,are going to have positon absoltute and the sky is position relative
+ and then you align them with right left top bottom and then for the car
+ you will have a parent of fixed height and width and the img of car itself having a width of 100%
+ and then you use transform translatex -50% and left 50%
+ for the wheels , they are going to have the rotate z of 360deg and they are 2 different images but they dont necessarily have a parent element (the parent element is the one that had the fixed width and height)
+ they have position absolute and margin from left and top to go to their place
+ for having dastandaz i told you about it
+  */

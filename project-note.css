@@ -1,0 +1,31 @@
+/* HELLO , WE ARE PRACTICING THE PROJECTS IN THE COURSE AND TAKING NOTES FROM IT HERE
+AND INSIDE OF THE HTML FILE AS WELL
+
+*/
+
+
+
+/* CREATING FOLDERS AND FILES FOR A REAL PROJECT : 
+
+THERE IS NORMAL HTML AND CSS WHICH ARE OUTSIDE OF ALL OF THE FOLDERS 
+AND THERE IS FOLDER NAMED "ASSETS", WHICH BASICALLY CONTAINS IMAGES,FONTS AND THE GRID SYSTEM
+THESE HAVE THEIR OWN FOLDERS*/
+
+/* WHEN YOU ARE LINKING YOUR GRID SYSTEM AND NORMAL CSS , MAKE SURE TO LINK THE GRID SYSTEM FIRST SO THAT THE OVERWRITING HAPPENS
+ */
+ /* YOU HAVE TO LINK "JAVASCRIPT" FILES AT THE END OF THE BODY SO THAT IT HELPS THE PAGE TO LOAD FASTER AND LOADS LATER .
+ 
+ BECAUSE AT FIRST , IF THE JAVASCRIPT LOADS LATE , IT DOESNT MATTER BECUASE THE USER DOESNT REALLY NEED THE JS AT THE FIRST OF HIS VISITING
+ THE USUAL NAME IS "MAIN.JS"*/
+
+ /* WHAT ARE HIDDEN CLASSES IN GRID SYSTEM: 
+ 
+ in a web page , for mobile and small devices, we hide unnecessary stuff so that the web page doesnt get crowded in mobile
+ 
+ so thats why we use hidden classe in grid system.
+ 
+ we first specify in what range of device we want it to be hidden (XS-hidden)
+ and then add a -hidden to it .
+ we put these classes in our normal media queries.
+ 
+ so for example if we want an element to be hidden in extra small screens, we can specify and give the class xs-hidden*/

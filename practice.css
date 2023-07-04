@@ -1,0 +1,2440 @@
+*{
+    box-sizing: border-box;
+
+}
+hr{
+    color: red;
+    size: 50px;
+}
+
+.first-box-model{
+    width: 200px;
+    height: 100px;
+    
+    color: white;
+    margin-left: 400px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border: 3px groove black; 
+   background-color: grey;
+}
+.first-box-model{
+    width: 200px;
+    height: 100px;
+    
+    color: white;
+    margin-left: 400px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border: 3px groove black; 
+    background-color: grey;
+    
+}
+.links{
+    width: 200px;
+
+    display: block;
+    color: white;
+    text-decoration:none;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-family: cursive;
+
+}
+.aside{
+    background-color: rgb(128, 0, 128);
+     width: 350px;
+    border: 2px groove rgba(0, 128, 0, 0.26);  
+    /* height: 300vw;
+    position: fixed;  */
+}
+.aside ul li {
+    list-style-type: circle;
+}
+.topic{
+    display: block;
+    color: white ;
+    text-decoration:none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: cursive;
+    padding-left: 6px;
+}
+.actual.form{
+
+}
+.inputs{
+    height: 22px;
+    width: 260px;
+}
+.total-inputs{
+    display: block;
+    font-size: 13px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.cross-shape{
+    height: 13px;
+}
+.report{
+   background-color: gold;
+    color:white;
+    width: 70px;
+    height: 30px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    
+    padding-right: 7px;
+    padding-bottom: 10px;
+    border-radius: 23px;
+    font-weight: 400;
+    
+   
+}
+.true-checkbox{
+    height:23px ;
+  width: 40px ;
+    
+    
+}
+
+
+.checkbox-label1{
+    margin-top: 4px;
+    margin-right: 12px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+   
+}
+.true-radio{
+width: 30px;
+ height: 20px;
+}
+.true-radio-label{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+}
+.false-radio{
+    width: 30px;
+    height: 20px;
+    margin-left: 35px;
+}
+.false-radio-label{
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    position: absolute; 
+    margin-top: 4px;
+    
+}
+.lorem{
+    white-space: nowrap;
+}
+@font-face {
+    font-family:sahel ;
+    src: url(./fonts/Sahel.eot) format(eot);
+}
+.font-test{
+    font-family: sahel;
+}
+.material-icons{
+    vertical-align: middle;
+    color: white;
+}
+.buy-button{
+    width: 120px;
+    border-radius: 20px;
+    border:2px solid black;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px black;
+    
+    background-color: red;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+.buy-text{
+    font-size: 17px;
+    
+    font-family: vazir;
+    
+    
+}
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/vazir-black.eot) format(eot);
+}
+.buy-button:hover{
+    background-color: aliceblue;
+    color: black;
+    transition: 0.98em; ;
+}
+.material-icons:hover{
+    
+}
+
+.buy-button:active{
+
+    background-color: black;
+    color: aliceblue;
+}
+.buy-button i{
+    color: black;
+}
+.h1-title{
+display: none;
+}
+
+.beauty-letter-spacing{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 18px;
+text-shadow: 4px 4px 5px green ;
+writing-mode: vertical-rl;
+font-family: 'Courier New', Courier, monospace;
+border: 4px dotted gold;
+
+/* DIFFRENCE BETWEEN BLOCK,INLINE AND INLINE-BLOCK
+
+Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
+
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+*/
+
+}
+.display-inline-block-test{
+    font-size: 40px;
+    font-family:cursive;
+    background-color: red;
+    color: white;
+    display: inline-block;
+    width: 800px;
+    height: 150px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.parent{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+.child-1{
+color:black;
+background-color: yellow;
+position: absolute;
+font-size: 20px;
+left: 0;
+width: 50px;
+height: 50px;
+}
+.child-2{
+color: black;
+background-color: yellow;
+position: absolute;
+font-size:20px;
+right: 0;
+width: 50px;
+height: 50px;
+
+}
+
+.child-3{
+    color:black;
+    background-color: yellow;
+    position: absolute;
+    font-size: 20px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+}
+.child-4{
+color: black;
+background-color: yellow;
+position: absolute;
+font-size:20px;
+right: 0;
+width: 50px;
+height: 50px;
+bottom: 0;
+}
+.focus-test{
+    width: 200px;
+   outline: none;
+   height: 70px;
+}
+.focus-test:focus{
+    background-color: yellowgreen;
+}
+.text-area-focus-test:focus{
+background-color: green;
+}
+.button-project{
+   
+    outline: none;
+   border: 2px solid black; 
+    width: 70px;
+    height: 40px;
+    padding-right: 12px;
+   
+}
+.text-button-project{
+   padding-right: 12px;
+}
+.button-project:hover{
+    top: 20px;
+    position: absolute;
+    transition: 2s;
+}
+
+.buy-button:hover .for-hovering-test, .buy-button.hover .for-hovering-test{
+    color: red;
+}
+
+.sub-menu-whole-parent li{
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+.sub-menu-whole-parent li a{
+    text-decoration: none;
+}
+.sub-menu-parent{
+    position: relative;
+}
+.sub-menu li a{
+    text-decoration: none;
+
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+}
+
+
+.sub-menu-parent a:hover {
+color: sandybrown;
+}
+.sub-menu-parent:hover .sub-menu{
+    display: block;
+    top: 10px;
+    right: 30px;
+}
+
+
+
+
+
+
+.sub-menu-parent2{
+position: relative;
+}
+.sub-menu2{
+display: none;
+position: absolute;
+}
+
+.sub-menu-parent2:active .sub-menu2{
+    display: block;
+}
+.second-test-parent{
+
+}
+
+
+.normal-width-practice{
+
+color: white;
+background-color: red;
+height: 50px;
+padding: 50px;
+}
+
+
+.test-width-practice{
+min-width: 200px;
+max-width: 700px;
+background-color: green;
+color: whitesmoke;
+height: 300px;
+font-size: 90px;
+padding: 50px;
+}
+
+
+.min-width-practice{
+color: white;
+background-color:red;
+padding: 40px;
+min-width: 800px;
+font-size: 90px;
+}
+.max-width-practice{
+color: white;
+background-color: blue;
+padding: 40px;
+max-width: 700px;
+font-size: 90px;
+}
+
+.pseudo-classes-practice span:first-of-type{
+color: white;
+background-color: green;
+
+}
+
+
+.pseudo-classes-practice:nth-child(3){
+    color: white;
+    background-color: green
+}
+
+.pseudo-classes-practice footer:first-of-type{
+    color: white;
+    background-color: red;
+}
+.pseudo-classes-practice footer:last-child{
+    color: white;
+    background-color: red;
+}
+.pseudo-classes-practice footer:nth-child(6){
+    color: white;
+    background-color: red;
+}
+.pseudo-classes-practice p:first-of-type{
+    color: white;
+    background-color: blue;
+}
+.pseudo-classes-practice p:last-of-type{
+    color: white;
+    background-color: darkgoldenrod;
+}
+
+#number-input-in-range-test:in-range{
+background-color: green;
+}
+#number-input-in-range-test:out-of-range{
+   background-color: tomato;
+}
+
+
+.text-min-max-test:invalid{
+background-color: red;
+}
+
+.normal-table-test{
+
+    margin-left: 35rem;
+    border: 1px solid red;
+}
+
+
+.normal-table-test tr th{
+    border: 1px solid red ;
+    /* border-collapse: collapse; */
+    border-spacing: 20px;
+
+    padding: 1rem;
+    
+}
+.normal-table-test tr td{
+    padding: 1rem;
+    border: 1px solid red;
+    /* border-collapse: collapse; */
+    border-spacing: 20px;
+}
+
+.calc-table{
+    margin-left: 37rem;
+  
+}
+.calc-table tr td button {
+/* padding-right:5px; */
+border-radius: 8px;
+text-align: center;
+border: 1px solid rgba(255, 0, 0, 0.39);
+width: 70px;
+height: 30px;
+font-size: 18px;
+
+}
+.calc-table tr td button:hover{
+    color: white;
+    background-color: blue;
+    transition: 0.7s;
+    border: none;
+}
+.calc-table tr td button:active{
+    background-color: black;
+    color: white;
+}
+.calc-table tr td button sup {
+    font-size: 10px;
+}
+td.for-styling-equal button:nth-child(6){
+background-color: #8ab4f8;
+color: white;
+border: none ;
+}
+td.for-styling-equal button:nth-child(6):hover{
+    border: none;
+}
+#smaller{
+    font-size: 12px;
+}
+
+#input-for-calc{
+    width: 500px;
+    height: 50px;
+    font-size: 23px;
+    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'Schibsted Grotesk', sans-serif;
+    letter-spacing: 1px;
+   margin-left: 600px;
+
+}
+#input-for-calc:focus{
+box-shadow:1px 1px 5px 2px grey;
+
+border: 1px darkgrey solid;
+
+
+}
+
+#input-for-calc:invalid{
+    color: white;
+    background-color: red;
+}
+
+.remove-button{
+    margin-left: -40px;
+    font-size: 25px;
+    border-radius: 20px;
+   background-color: rgba(255, 0, 0, 0.616);
+   color: white;
+   border: none;
+   color: black;
+    background-color: white;
+    transition: 0.5s;
+}
+.remove-button:hover{
+    background-color: rgba(255, 0, 0, 0.767);
+   color: white;
+}
+
+.float{
+    width: 200px;
+height: 200px;
+box-sizing: border-box;
+background-color: #000;
+color: white;
+text-transform: capitalize;
+font-size: 30px;
+padding: 30px;
+float: left;
+margin-right: 10px;
+}
+.clear{
+    clear: both;
+   
+}
+.display-flow-root{
+    /* display: flow-root; */
+    overflow: auto;
+    background-color: bisque;
+    border: 1px solid gold;
+}
+
+.display-flow-root p{
+clear: both;
+}
+
+.for-proving input{
+border-top: 0 ;
+border-left: 0;
+border-right:0;
+outline: none;
+border-bottom: 1px solid white;
+margin-bottom: 10px;
+margin: 10px;
+appearance: none;
+border: none;
+-webkit-appearance: none;
+
+}
+
+.for-proving input:focus{
+    border-top: 0 ;
+border-left: 0;
+border-right:0;
+outline: none !important;
+
+}
+
+.for-proving{
+    background-color: rgb(189, 128, 92);
+    height: 110px;
+    width: 500px;
+}
+
+/* @media screen and (prefers-color-scheme: dark) {
+    .dark{
+      color: #fff;
+    } } */
+
+    .button-test{
+        color: white;
+      background-image: linear-gradient(to left,red,blue);
+        width: 90px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        font-size: 17px;
+        font-weight: 500;
+    
+        font-family:'Courier New', Courier, monospace;
+    }
+    .button-test:hover{
+        margin-top: 5px;
+        transition: 0.7s;
+    }
+
+  .div1-for-border-image{
+    border: 15px solid transparent;
+    border-image-source: url(../img/border-image.png);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+
+  .div2-for-border-image{
+    border: 15px solid transparent;
+    border-image-source: url(../img/border-image.png);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+
+  .div3-for-border-image{
+    border: 15px solid transparent;
+    border-image-source: url(../img/border-image.png);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+  }
+
+.div1-for-border-image-gradient{
+
+    border: 15px solid transparent;
+    border-image-source: repeating-linear-gradient(blue,red);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+.div2-for-border-image-gradient{
+
+    border: 15px solid transparent;
+    border-image-source: repeating-linear-gradient(blue,red);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.div3-for-border-image-gradient{
+
+    border: 15px solid transparent;
+    border-image-source: repeating-linear-gradient(blue,red);
+    border-image-slice: 27;
+    border-image-repeat: round;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+.attribiute-selectors-practice > input[disabled]{
+    background-color: red;
+}
+.attribiute-selectors-practice > input[type="password"]{
+    background-color: green;
+}
+::placeholder{
+    color: red;
+}
+div img[alt="google"]{
+margin-left: 50px;
+}
+div img[alt~="zarbdar"]{
+    margin-left: 200px;
+}
+.texts-container [class*="text"]{
+    color:darkred;
+
+}
+.margin-auto-test{
+    background-color: gray;
+min-height: 200px;
+max-width: 400px;
+   margin: auto;
+   position: relative;
+}
+.margin-auto-test button{
+    margin: auto;
+    height: 50px;
+width: 50px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%)
+
+}
+.im-better-G{
+    background-color: rgb(177, 175, 175);
+    height: 200px;
+    width: 400px;
+box-sizing: border-box;
+margin: auto;
+direction: rtl;
+padding:10px ;
+
+  
+}
+.im-better-G input{
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  border: none;
+
+    width: 100%;
+    height: 30px;
+}
+.im-better-G input::placeholder{
+   color: unset;
+    font-family: vazir;
+    font-weight: lighter;
+ font-size: 15px;
+ padding-right: 5px;
+}
+.im-better-G button{
+    font-family: vazir;
+    height: 25px;
+
+    width: 65px;
+    font-size: 14px;
+    background-color: rgb(4, 180, 4);
+    border: none;
+    color: rgba(255, 255, 255, 0.846);
+}
+.im-better-G input:focus{
+   
+  outline: 0;
+    border-color: black;
+   border-width: 2px;
+   border-style: solid;
+  border-image: linear-gradient(to left,red,blue);
+  border-image-slice: 10;
+  
+}
+.im-better-G button:hover{
+    background-color: rgb(3, 95, 3);
+    cursor: pointer;
+}
+
+.buttons-parent{
+    text-align: center;
+   
+}
+
+
+
+-----------------------
+
+
+/*  ways of using css :
+inline : inside of the html element itself
+internal : inside of the <style> tag in the html document 
+external :linking the html document to this type of files 
+
+olaviat ha baraye google engine:
+inline > internal > external
+
+
+
+diffrence between ID and CLASS :
+
+id : its for a special tag , and you cannot use the name of the same id for other tags
+you cant say 
+p id = 12
+h1 id = 12
+it doesnt work 
+more than 1 element it self shouldnt have the same id name
+
+class : its normal , and you can use it for multiple elements
+
+agar dota tag dar HTML class shoon yeki bashe va faghat mikhasti yekishoono seda bezani (eshare koni)
+esm tag + .esm class
+for example :
+
+h4 class amir
+h5 class amir
+
+age mikhai bein ina faghat h5 ro eshare koni :
+h5(esm tag).amir (.esm class)
+
+agar h4
+h4.amir
+
+
+<h1 class="amir1 amirkoli">this is an h1 tag </h1>
+<h2 class="amir2 amirkoli">this is an h2 tag </h2>
+<!--vaghti hengam class gozashtan space mizari , az space be badesh ye esm class jadid tarif mikone
+for example (in css) :
+
+.amir1{
+   font size 15
+}
+.amir2{
+   font size 12
+}
+amirkoli{
+   color blue 
+}
+
+
+inja ye seri chizashoon moshtarak hastesh baraye hamin intori mikonim 
+alan color blue baraye dotashoon emal mishe-->
+
+
+id > class (az lahaz olaviat)
+
+
+COMMENTS IN CSS 
+ctrl + /
+
+
+
+BOX MODEL : 
+har element ye box dare ke ma mitoonim oon box ro tanzim , koochik ya bozorg konim
+you can easily see the amount (size) of the box of your element in inspect 
+there is the size of the content (text , img and etc)itself (height and width)
+there is the border of the element of the directions
+there is the padding , of the directions 
+there is margin , of the directions
+
+NOTE : if you set a width , block or inline wont apply anymore
+*/
+#box-model1{
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 200px;
+    height: 120px;
+   border: red solid 4px;
+   box-sizing: border-box;
+   /* border-width: 4px;
+   border-color: red;
+border-style: solid; */
+padding: 5px;
+margin-left: 200px;
+}
+/* PADDING : THE SPACE OF THE ELEMENT INSIDE THE PARENT ELEMENT
+
+(padding top 10 px 
+padding left 10 
+padding right 10 
+padding bottom 10) = (padding = 10 px)
+padding normal har cheghadr value behesh bedi baraye hame jahat ha emal mikone
+
+mitooni halat kholase benevisi baraye hame direction ha  vali bayad intori bashe
+padding 10px (top) 5px (right) 4px (bottom) 2px (left)
+be soorat ساعتگرد hast 
+
+
+same as margin
+*/
+
+
+/*
+CALCULATING TOTAL WIDTH AND HEIGHT :
+
+the total width of an element should calculated like this :
+
+total width element = width + left padding right + right padding + left border + right border + left margin + right margin 
+
+the total height of an element should be calculated like this : 
+
+total height element = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+
+margin , padding , border , width or height themselves 
+
+for height : bottom and top 
+for width : right and left 
+
+also remember that width and height in box models are the opposite of persian*/
+
+/* USING A PROPERTY FOR ALL OF THE ELEMENTS IN PROJECT : 
+when you want to apply a property with the same value to all of the elements
+instead of using it for all of em do this avalin khat code
+
+*{
+   font size 12px
+}
+this applies ALL the elements
+*/
+
+
+
+/*
+EXACT SIZE WITH "BOX-SIZING" PROPERTY : 
+
+as you know , when you apply padding in an element , the element gets larger 
+so we can say 
+padding impacts the size of an element 
+
+so when the UI person tells you that the text , botton or img or ... should be exactly
+for example 100 dar 300 
+
+and you add some padding and it becomes for example 120 dar 320 
+so you have to make it to EXACTLY  100 dar 300
+
+you should use a property called "box-sizing" and select border-box
+when you do that , the padding still works but doesnt impact the size of the element anymore
+by adding this property , we tell the engine that we want our element to be EXACTLY 
+our width and height
+
+so now , our exact height is 120px and width is 200px 
+without box sizing , the padding and the border impacts them and makes them to 218 dar 138 
+but we want exactly 200 dar 120
+
+so lets set the box sizing
+CSS RESET(SUMMERY TOR) :
+its almost always good to add padding 0 margin 0 (cuz the engine has a defult engine itself and we dont want that) box-sizing border-box at the first line for all of the elements
+at the top of the page
+like this : 
+
+*{
+box-sizing: border-box
+margin 0 
+padding 0 
+}*/
+/* PADDING FOR TEXT :
+
+if you give padding to a text , you can imagine the width (you can find it as the background-color) as the button or etc. */
+/* TEXT-ALIGN = JUSTIFY :
+
+for a better eye vision , text align justify allows you to view the text better and put the lines horizintally at the same margin from left or right*/
+
+/* HOW TO CALCULATE THE LINE-HEIGHT : 
+line height fasele bein khotot ro moshakhas mikone
+
+first , you should look at the font-size
+if you didnt set it yourself you can find the defult by inspector 
+
+so for english articles its like this : 
+
+font-size × 1.6 = the line-height amount
+20 × 1.6 = 32 
+
+for the persian one : 
+font-size × 1.5 = the line-height amount
+20 × 1.5 = 30
+*/
+/* TEXT DECORAION : 
+its for removing the underline of an A tag */
+
+
+/* TEXT DECORATION : LINE-THROUGH : 
+khat keshidan roie text (mesl takhfif khordan) */
+
+
+/* LETTER SPACING : 
+space between LETTERS not words
+
+it has negative (-) too*/
+
+/* WORD SPACING :  
+
+the space between WORDS
+it has negative (-) too
+*/
+
+
+/* TEXT-SHADOW : 
+text-shadow is for the shadow of the text that we have
+it gets 4 values 
+mehvar X (az lahaz samt chap va rast bodan)
+mehvar Y (bala va paeen)
+meghdar blur boodan 
+rang (color)
+
+there is a type of square right before the first value
+click on it*/
+
+
+
+.justify-test{
+  
+   font-size: 20px;
+   line-height:32px ;
+ text-decoration: overline;
+ text-decoration: line-through;
+ text-transform: uppercase;
+ /* letter-spacing: 12px; */
+  
+}
+
+/* TEXT-TRANSFORM : 
+baraye inke begi horoof capital bashe ya lowercase
+capitalaize:
+horoof aval har kalame bozorg mishan */
+
+/* WHITE-SPACE PROPERTY : 
+this tag is for observing the line-breaks and the spaces between the lines
+
+you see , without the white space there are line breaks that the engine of google developed it itself
+
+but with white-space we tell the engine that develop the text as we like
+
+with the spaces and line-breaks
+without the space but with the line-breaks
+with the line-breaks but without space
+or even normal
+
+VALUES : 
+NOWRAP:
+this one
+ doesnt oberve anything , line-breaks or spaces
+it doesnt even observe the google engine itself
+
+PRE-LINE:
+this one
+ observes the line-breaks but not the spaces 
+
+
+PRE-WRAP:
+this one
+ observes everything , spaces and line-breaks
+
+
+
+ NORMAL : 
+ this one
+ does the engines duty 
+
+
+*/
+
+.white-space-test{
+   font-size: 30px;
+   font-weight: 500;
+   white-space: nowrap;
+  
+   border: 1px solid black;
+   overflow: hidden;
+ text-overflow: ellipsis;
+
+ 
+
+}
+.img-test{
+   margin-left: -20rem;
+   
+
+  
+  
+}
+
+.nahbro{
+   border: 2px solid black;
+   width: 20px;
+ word-wrap: break-word
+  ;
+}
+
+.img-G{
+width: 40px;
+vertical-align: middle;
+
+
+}
+.writing-mode-test{
+ 
+   font-size: 40px;
+   font-family: cursive;
+   writing-mode: vertical-rl;
+   letter-spacing: 20px;
+   direction: ltr;
+   margin-left: 100px;
+   border: 2px solid black;
+
+}
+
+/* VERTICAL-ALIGN: 
+
+agar be element i ke bishtarin ertefa ro nesbat be saier ajza dare 
+(bozorgtarin onsor az nazar ertefa dar kenar baghie) vertical-align bedim 
+rooye element haye KENARISH ke kanar haman tasir mizare
+
+NOTE: be element i ke mikhai biad masalan middle nabayad vertical align bedi
+balke be element kenari bayad bedi
+aza ro nesbat be bozorgtarin ozv taraz midi
+example : 
+The element is aligned with the top of the tallest element on the line
+there is also px and stuff
+negative is going bottom
+normal (10px) goes top
+sub is down of the other
+super is top
+
+a parent + a tag + a tag
+if its a text you can use sub and sup*/
+
+.vertical-google-test{
+width: 32px;
+vertical-align: sub;
+background-color: grey
+;
+
+}
+.google-text{
+
+}
+.aaa{
+   background-color: yellow;
+   display: inline;
+   vertical-align: 30px;
+   
+  
+}
+.iii{
+
+  height: 70px;
+
+ 
+
+}
+.help-me{
+vertical-align: 32px;
+}
+
+.tired-asf{
+   vertical-align: 30px;
+}
+.dddd{
+   
+   background-color: yellow;
+   display: inline;
+}
+
+/* FONTS IN CSS : 
+
+most of the fonts are ttf but we dont want that
+only eot 
+woff
+woff2 
+is what we want */
+/* FOR ADDING FONTS TO THE WEB PAGE : 
+
+first 
+you have to download the font
+drag it to your folder 
+then
+
+write 
+@font-face {
+   src url (address the font)
+   format (eot and etc)
+   */
+   @font-face {
+      /* font-family:a name for this ; */
+      src: url() format();
+   }
+
+   /* BACKGROUND PROPRERTIES : 
+   there is background-color
+   
+   there is background-img
+   its for when you want to set an img for your bg 
+   set url(the address)
+   
+   there is background-position 
+   you can set that where the bg img is placed 
+   center top right bottom left 
+   even you can set many values
+   like : 
+top right
+
+
+   there is background-size 
+   the size of the bg
+   there are 2 values for this
+
+   cover:
+   if you want it to fully cover the page 
+
+   contain: if you want the img fully visible 
+   and you dont care about covering the page 
+
+
+
+
+
+  there is  background-attachment 
+  	Sets whether a background image is fixed or scrolls with the rest of the page
+   if scrolls 
+   the bg scrolls too 
+   but if fixed
+   the bg if fixed and only the text scrolls
+
+
+
+   there is background-repeat 
+   there are sometimes that the pic doesnt fully cover the page and then the
+   google itself repeats the img to cover
+   with this property you can say dont repeat 
+   or only repeat them in x or y mehvar
+
+
+
+   there is background-clip
+   halat addi border miofte roye bgc
+
+   there are 2 values for this 
+
+   content-box
+   it only displaies the content of the box and doesnt care about the padding or border
+   
+   
+   padding-box 
+   dige border zir bgc nemiofte va faghat padding va content daroon bgc an
+   
+
+
+   if you have a box and border 
+   you can set 
+
+
+   */
+   html{
+background-image: url(./img/bg.jpg);
+background-attachment: fixed;
+   }
+   /* USING ICONS FROM GOOGLE : 
+   fist
+   search on google 
+   google icon fonts
+   and then go to the site
+find the icon or the symbol that you want 
+click 
+and then paste the link that it says to the head tag
+then there is a class that there are styles for it
+give that class name to the tag
+i think for the icons you should remove outlined in the name from the class
+   IF YOU CANT UNDRESTAND OR APPLY THIS YOU CAN USE DEVELOPER GUIDE 
+
+
+
+    */
+    
+    
+/* USING FONT AWESOME ICONS : 
+
+first , search "font awesome" in google 
+
+go to the site and find the icon that you want 
+
+you can search BUT WITH VPN
+
+then , find the cdn(the link in the head tag) in the docs menu
+
+and then paste it to the head tag
+
+after that , paste the icon name (<i class="fa-solid fa-user"></i>)
+
+done*/
+
+
+/* STYLING LISTS IN CSS : 
+
+there are a few properties you can use in order to style lists 
+
+
+list style type :
+it specifies how the "bullets" of lists look like by its defult values 
+
+list stlyle img :
+you can put url() and then put images for the "bullets"
+
+list style position : 
+there is only inside and outside 
+outside is the normal value (defult)
+inside ye zare mikeshatesh jelo
+
+list style : 
+shorthand 
+*/
+
+
+/* DIFFERENCE BETWEEN DISPLAY NONE AND VISIBILITY HIDDEN : 
+
+they both hide the element 
+But
+
+dar visibility hidden , faghat tag dide nemishe va faza ro por mikone
+
+ama dar display hidden , engar ke element aslan chap nashode va nistl*/
+   
+
+.list-style{
+   list-style-image: url(../img/list-style.png ) ; 
+
+}
+
+/* OUTLINE IN CSS : 
+border of an input is outline 
+
+if you set a border for an input it doesnt work very well */
+/* OUTLINE IN CSS : 
+
+fazaye dakheli yek input ro outline migan 
+
+fazaye posht border
+
+you can learn it in w3school*/
+
+/* DIFFERENCE BETWEEN :FOCUS AND :ACTIVE : 
+
+for active you should hold the element 
+
+but  for focus , when you focus(click) on an input , the styles appear
+
+active might be used for every element but focus is mostly used for forms and etc*/
+
+
+
+/*
+CHANGE THE CHILD BY HOVERING ON PARENT ELEMENT : 
+
+
+.email-button:hover .email-icon, .email-button.hover .email-icon { color: sandybrown; }
+
+
+aval az hame moarefish mikoni(.email-button:hover .email-icon,) baad inkar roobero ro mikoni 
+
+havaset bashe ghabl az hover (baad az moarefi kardan) : nazari va . bezari
+.parent:hover .child, .parent.hover .child{}
+
+
+
+MIN-WIDTH AND MAX-WIDTH : 
+
+
+min-width says that the minimum of the width of the element is X 
+and it can be more if the size of the browser ls bigger 
+yani kaf kaf X hast va faghat bishtar mitoone beshe 
+
+they are both good for being responsive
+
+max-width says that the maximum size of an element is X
+and it can be smaller if the browser is smaller
+yani tah tahesh X hast va faghat kamtar mitoone beshe 
+
+
+
+
+   BOX-SHADOW IN CSS : 
+
+   box shadow is for giving shadow to the element (the box of the element ) not the content itself
+   box shadow gets 4-6 values . 
+
+   first one , the x mehvar (_) 
+   second one , the Y mehvar (|)
+   third one , the amount of blur-being
+   4th one , the amount of spread (pakhsh kardan)
+   5th one , the color
+
+   the first one can set to inset (the shadow appears inside of the element)
+
+
+   BORDER-RADIUS IN CSS : 
+   border-radius can be used short hand too (as we used it)
+   but , it can be used long hand too 
+
+   it gets 4 values . 
+   top left
+   top right
+   bottom right
+   bottom left
+   dar vaghe besorat saatgard value migire
+
+   now , if you set the value smth like this : 
+   border radius : 10px 20px ; 
+   what would actually happen is , if you dont give a value to one of them like for example here we didnt give value to bottom left 
+
+   if you dont do that , the bottom left actually copies the opposite value of it (top left)
+
+
+   !IMPORTANT IN CSS : 
+
+if you set a style for an element , and then you set the same property with a different value , 
+
+and you want the second one to apply , you have to put !important next to the value of the element 
+example : 
+
+width : 200px
+width : 300px !important 
+
+the 300 will apply .
+*/
+
+/* FIRST CHILD PSEUDO CLASS IN CSS : 
+
+lets say you have a container
+and inside of that container , there are 4 p tags
+
+if you want to call the first p tag of that parent element , you have to use first child
+
+if you use the p tag and first child only (p:first-child) its gonna call all of the p tags that are
+
+the first child of their parent
+but if you want to call a specifc one 
+give parent a class or call its name 
+and do it like this 
+
+parent p:first-child
+
+LAST CHLID IS THE OPPOSITE OF THE FIRST CHILD*/
+
+.first-child-parent li:first-child{
+   color: red;
+}
+
+
+/* FIRST OF TYPE PSEUDO CLASS IN CSS :
+lets say you have a container
+and inside of that container , you have multiple different tags 
+
+and you want to call only one specific of them 
+you call the parent , and then you choose what type of them you want (span?strong?img?p?) and after that :first-of-type
+parent type:first-of-type
+
+NOTE : this only chooses the first one of that type 
+
+LAST OF TYPE IS THE OPPOSITE
+*/
+
+.first-of-type-parent strong:first-of-type{
+   color: red;
+}
+
+/* NOT(SELECTOR) IN CSS:
+
+lets say you have a container and you one to give the same style to all of the children
+
+but , you one of them is special and you dont want only one of them to have that style 
+
+.children:not(p)
+
+toye in children in p ro dar nazar nagir vali in style haro baraye baghie emal kon
+*/
+
+/* NTH CHILD YOU KNOW IT
+
+NTH OF TYPE IN CSS : 
+
+the number of that type you want 
+you have for p's 
+you want to choose the 4th one
+ parent p:nth of child 4
+*/
+
+/* YOU CAN JUST SEARCH AND LEAERN ABOUT OTHER PSEUDO CLASSES */
+
+/* BORDER-SPACING IN CSS  */
+
+/* ODD AND EVEN IN NTH CHILD  */
+
+
+/* practice tables in css and create a great table and complete pseudo classes yourself and learn all of them 
+*/
+
+/* IN-RANGE AND OUT-OF-RANGE PSEUDO CLASSES IN CSS : 
+
+
+IN-RANGE : if you have some sort of input:number then you specify min and max (you should) 
+
+lets say you say 
+min 2 max 4 
+if the users enter 2 to 4  , the styles you said will appear on the input
+
+OUT-OF-RANGE : 
+if the users enter 5 or more , the styles you said will appear on the input
+
+
+ */
+
+
+
+
+ /* INVALID ,VALID AND INPUT PATTERNS IN HTML AND CSS : 
+ 
+ if you set a pattern for an html input , you are basically saying which characters you allow the users 
+ to use .
+ 
+ how you do that is : 
+ <input type="text" min="2" max="7" class="text-min-max-test" pattern="[a-zA-Z0-9]*">
+ 
+ be carefull that you put that * after that
+ 
+ 
+ VALID AND INVALID PSEUDO CLASSES: 
+ 
+ VALID : you are basically saying that if the content was alright , appear these styles
+ 
+ INVALID : you are basically saying that if the content was wrong , appear these styles
+ 
+ 
+ 
+NOTE : IN-RANGE AND OUT-OF-RANGE ARE ONLY USED FOR NUMBERS BUT VALID AND INVALID ARE USED FOR
+OTHER CHARACTERS.*/
+
+
+/* styling tables on yt
+
+border collapse
+
+
+*/
+
+/* PSEUDO ELEMENTS IN CSS : 
+
+::selection : with this one , you specify how the user can highlight (copy drag etc) the text 
+
+TWO IMPORTANT ONES THAT ARE MOSTLY USED ARE : 
+
+::before : if you want to put someting BEFORE a content 
+
+
+::after : if you want to put smth AFTER a content 
+
+
+NOTE : FOR BOTH OF THESE PSEUDO ELEMENTS , "CONTENT" PROPERTY IS REQUIRED 
+
+::marker : while having a list , you can actually style the bullet by this pseudo element 
+so if you set the color to red 
+the bulletts of the list will be red
+HOW TO USE CONTENT PROPERTY : 
+
+IF YOU WANT TO APPLY NORMAL TEXT OR UNICODES (HTML OR FONTAWESOME) , YOU SHOULD ADD "" AND WRITE INSIDE 
+
+FOR UNICODES , YOU SHOULD ADD THEM LIKE THIS : 
+"\THE UNICODE"
+DONT FORGET THE BACK SLASH (\)
+
+FOR IMAGES  ADD URL
+
+*/
+
+
+
+/* 
+.google-after-before-test::after{
+content:;
+height: 30px;
+width: 30px;
+} */
+.comments-before-after::after{
+   content: "\26E4";
+   font-size: 34px;
+   
+}
+
+/* hexa rgb rgba
+
+css colors 
+clear 
+befor after pseudo elemente*/
+
+
+/* CSS COLORS : 
+
+RGB : red , green , blue 
+0 to 255
+rgb(0,255,0)
+now this is green 
+ 0 0 0 is black
+ 255 255 255 is white
+
+RGBA : is the same as RGB but added opacity at the end 
+red green blue opacity (alpha)
+opactiy is 0 to 1
+rgba()
+
+HEX : RR GG BB 
+numbers are mixed with words 
+and how this works is
+
+1 -> 9 (we use numbers for 1 to 9) after that , A -> F .
+so its also 0 to 255
+NOTE : YOU DONT REALLY NEED TO KNOW HEX , BECAUSE YOU CAN USE COLOR PICKER OR THE UI PERSON GIVES YOU THE COLOR
+
+#000000
+TIP : YOU CAN USE COLOR PICKER AND COPY THE HEX OR OTHERS CODE IN HTML .
+
+
+*/
+
+
+/* LEARN FLOAT AND CLEAR IN CSS */
+
+
+
+/* CSS FLOAT AND CLEAR IN CSS : 
+
+FLOAT : when you want an element to wrap around the other element , you give the
+other element flot property 
+
+basically , the second element is allowing other elements to wrap around it .
+
+CLEAR : 
+if you  dont want some elements to wrap around it and you want only some of them ,
+you have to give clear property to those you DONT want them to wrap around it .
+
+it has 3 important values
+left
+right
+both
+depends on what value of float you have setted for that img , you can set for this .
+
+for example : 
+if you set float right for that img
+set clear right for that p who you dont want to wrap around that img*/
+/* 
+
+REMEMBER TO USE SEMANTIG WEB TAGS 
+
+AND READ ABOUT DISPLAY FLOW ROOT AND OVERFLOW HIDDEN TO SOLVE THAT PROBLEM IN FLOAT
+
+ALSO , YOU CAN TAKE TIME TO REVIEW THE TAGS YOUVE LEARNT BEFORE
+START IT .*/
+
+
+/* DISPLAY FLOW ROOT IN CSS : 
+
+there are times where you are using float prp and the text wraps around it
+correctly 
+but if you want to set a bg and see what happens , if the text isnt 
+long enough , the image will stick out of the bg 
+
+there are 2 ways to fix this
+
+overflow auto
+display flow-root
+
+maybe clear might work too*/
+
+
+
+
+
+/* GRADIENT IN CSS : 
+
+GRADIENT COLORS GIVE YOU THE OPTION TO USE MUTIPLE COLORS AT TIME FOR A SINGLE ELEMENT
+
+we have 2 types of gradient in css
+
+linear gradiant (most common ) : you can specify the direction (to left , to right etc)
+you can specify deg and the percent which says what percent of the 
+element should that color fill 
+
+
+
+radial gradient : it specifies the colors from the absolute center to normal 
+you can specify  shapes (circle , square etc)
+
+
+YOU CAN ALSO USE WEBSITE TO GET A BETTER COLOR
+
+
+BORDER-IMAGE IN CSS : 
+
+WITH THIS PRP , YOU CAN SPECIFY IMG FOR THE BORDER OF A CONTENT 
+
+BUT , NOTE THAT THE IMG SHOULD FIT THE BORDER PERFECTLY 
+
+4 CONRNERS
+4 MAIN 
+1 INSET 
+
+we have multiple prps for this but we can write it shorthand too 
+
+border image source : you can say url or linear gradient
+
+border image outset : you can specify the space between the content and the border
+
+border image width : specifies how big the pieces would be
+
+border image slice : specifies how much can it slice from one piece 
+if the piece defult is 30px , and you say 10 , it only shows 1:3 of that piece
+you can say fill , and it shows the inset of the img too
+
+border image repeat : there are different values for this
+
+repeat which is a defult version 
+
+stretch : stretches pieces
+
+
+ if the pieces have got problems and some of them are displaying badly , you should set these two values
+
+ round :it makes the pieces as fit as possible and they stick to each other
+
+space : it gives some space between the pieces so that they can fit ok
+*/
+
+
+
+.linear-gradient{
+   width: 500px;
+   height: 100px;
+   background-image: linear-gradient(to left,red,blue);
+}
+
+.radial-gradient{
+   width: 500px;
+   height: 100px;
+   background-image: radial-gradient(  circle,red ,blue,green);
+}
+
+
+.gradient-button{
+ border-radius: 20px;
+ background-image: linear-gradient(to left,red,blue);
+ width: 50px;
+ height: 30px;
+ color: white;
+ border: none;
+}
+.gradient-button:hover{
+   margin-top: 10px;
+   transition: 0.7s;
+}
+.border-image-test{
+   height: 300px;
+   width:405px;
+   border: 20px solid transparent;
+border-image-source: url(img/border-image.png);
+border-image-slice: 27;
+border-image-repeat:round; 
+/* border-image-width: 50px; */
+
+
+
+}
+
+
+
+/* FILTER PRP IN CSS : 
+
+FILTER PRP ALLOWS DEVELOPERS TO ACTUALLY STYLE THE IMG THAT WE HAVE WITHOUT USING PHOTOSHOP
+
+blur : you know that , it takes pixels
+
+brightness : specifies how bright or dark the pic can be 
+it takes numeric values 
+0 to 100 
+below 1 is dark
+after 1 is bright
+
+drop shadow : works exactly the same as box shadow and text shadow
+
+opacity : the same as the opacity prp itself
+
+grayscale : makes the color gray 
+value of 0 to upper than
+the upper the grayer
+
+invert : transfers the color to the opposite of it
+value of 0 to upper than 1
+1 is normal , the upper , the more opposite 
+
+saturation : makes all of the specific colors bright in their role 
+makes it closer to the acual color they are (rgb)
+
+sepia : sepia makes your img kinda old timey and bronze
+
+contrast : its kinda the same as saturate and makes the color bright
+
+
+they usually get a value from 0 to upper than 1 , but you can specify percentages if you want to
+
+blur is px
+
+NOTE : YOU CAN WRITE THESE WITH EACH OTHER TOO BUT IN ANOTHER CODE
+
+FILTER CONTRAST 10
+FILTER BLUR 5 
+
+THEY BOTH APPLY NOW
+
+ */
+
+ .for-contrast-and-others{
+   filter: saturate(15);
+
+ }
+
+ .for-contrast-and-others:hover{
+   transition: 5s;
+   filter: blur(2px);
+
+ 
+ }
+
+
+
+ /* ROOT IN CSS : 
+ 
+ FOR SPECIFYING VARIABLES AND USING THEM MUTIPLE TIMES , WE CAN DO THAT IN THE 
+ ROOT PSEUDO ELEMENT 
+
+ YOU ONLY GIVE THE VARIABLE A VALUE , NOT A PROPERTY
+ YOU BASICALLY GIVE A SPECIFIC VALUE TO THE VARIBABLE AND USE THAT VALUE FOR ELEMEMENTS YOU WANT
+ 
+--the name : value
+ 
+ 
+ #AMIR{
+   color : var(thename)
+ }*/
+
+ :root{
+ --button-colors: yellow ;
+
+ }
+ .variables-test{
+   background-color: var(--button-colors);
+ }
+
+
+ /* MAZHOOLAR NEVISI IN CSS AND WEB PROJECTS : 
+ 
+ THE AVERAGE AMOUNT OF CODE FOR BIG PROJECTS IS AROUND 1000 
+
+ AND ITS HARD TO SCROLL LIKE THAT 
+
+ SO WHAT YOU WOULD LIKE TO DO IS : 
+
+ MAKE THE CODE INTO DIFFERENT PARTS AND WRITE THEM INTO DIFFERENT PARTS AND THEN IMPORT THEM INTO ONE FILE
+
+ FOR EXAMPLE , WE WOULD LIKE TO PUT OUR CSS RESET INTO ANOTHER FILE 
+ AND THEN IMPORT IT INTO ONE FILE
+
+OR , PUT THE CODE OF THE FOOTER TO ANOTHER FILE SO THAT THE FILES ARE CLEANER
+BUT , IT WOULD BE BAD FOR LOADING PAGE
+AND YOU SHOULD FESHORDE THEM TO HAPPEN
+ 
+ AND HOW YOU DO THAT IS : 
+
+ YOU CUT THE CODE AND THEN PASTE IT IN ANOTHER FILE 
+
+ AND THEN , YOU USE @IMPORT TO IMPORT THAT FILE
+
+ HOW YOU DO THAT IS : 
+ 
+ ONE WAY :  @IMPORT "..CSS/CSSRESET"
+ SECOND WAY : @ IMPORT URL()
+
+
+ @IMPORT SHOULD BE THE FIRST LINE OF CODE
+
+
+ */
+/* @CHARSET UTF-8 IN CSS : 
+
+ITS FOR SUPPORTING SPECIAL CHARACTERS FOR OLDER BROWSERS 
+IT HAS TO BE THE FIRST LINE , EVEN MORE IMPORTANT THAN @IMPORT
+*/
+.just-a-test > p{
+color: rgba(9, 255, 0, 0.904);
+background-color: blue;
+}
+.just-a-test span{
+   color: orangered;
+   background-color: aquamarine;
+}
+#just-for-testing-and-learning-combinators{
+   font-size: 23px;
+}
+#just-for-testing-and-learning-combinators > p{
+   color: darkorange;
+   background-color: rgb(206, 238, 130);
+}
+#just-for-testing-and-learning-combinators span{
+   color: aqua;
+   background-color: tomato;
+}
+#just-for-testing-and-learning-combinators div p {
+   color: darkorange;
+   background-color: beige;
+}
+#just-for-testing-and-learning-combinators ~ span{
+   color: cornflowerblue;
+   background-color: crimson;
+}
+
+/* COMBINATORS IN CSS : 
+
+NORMALLY , WHEN YOU WANT TO CHOOSE AND STYLE A CHILD INSIDE OF ITS PARENT , YOU SAY "PARENT CHILD {}"
+
+WHEN YOU SAY FOR EXAMPLE 'PARENT P{}' IT CHOOSES ALL OF THE P ELEMENTS THAT ARE INSIDE OF ITS PARENT
+EVEN THOSE WHO ARE INSIDE OF A PARENT FOR EXAMPLE DIV THEMSELVES
+
+BUT
+WHEN YOU DONT WANT THIS AND YOU DONT WANT TO CHOOSE 'THOSE WHO ARE INSIDE OF A PARENT FOR EXAMPLE DIV THEMSELVES'
+YOU HAVE TO SAY : 
+
+"PARENT > P"
+SO IT WONT CHOOSE ITS GRANDCHILDREN
+
+IT CHOOSES ITS ACTUAL CHILDREN (P)
+
++: SO IF THE PARENT TAGS IS CLOSED AND YOU WANT TO WRITE OTHER CODES OUTSIDE OF THE PARENT TAG , FOR EXAMPLE : 
+
+<DIV>
+
+</DIV>
+<SPAN> </SPAN>
+AND YOU WANT TO CHOOSE THE SPAN BUT WITHOUT WRITING A CLASS 
+YOU HAVE TO SAY: 
+
+DIV + SPAN{}
+AND WHEN YOU DO THAT , IT CHOOSES THE ONLY AND ONLY ONE AFTER THAT AND NO OTHER ONES
+EVEN IF THERE IS ANOTHER SPAN AFTER THE FIRST ONE , IT ONLY CHOOSES THE FIRST ONE .
+FOR EXAMPLE : 
+
+<DIV>
+
+</DIV>
+<SPAN> </SPAN>
+<SPAN> </SPAN>
+IT WILL ONLY CHOOSE THE FIST SPAN 
+
+~: THIS ONE , IS COMPLETELY THE OPPOSITE OF THE + 
+IT CHOOSES ALL OF THE SPAN TAGS AFTER DIV 
+
+YOU CAN SPECIFY CLASSES BUT FOR CLEAN CODE , ITS BETTER TO DO IT LIKE THIS
+ */
+ /* ATTRIBIUTE SELECTORS IN CSS : 
+ THERE IS A WAY OF SPECIFYING AND SELECTING WHEN STYLING
+ 
+ THIS IS MOSTLY USED FOR FORMS (LOGIN INPUT ETC)
+ 
+ FOR EXAMPLE : 
+ 
+ IF AN INPUT HAS THE VALUE ATTRIBIUTE OR ANY OTHER ATTRIBIUTES , 
+ 
+ YOU CAN SELECT IT WITH A []
+ 
+ INPUT[VALUE]
+ OR
+ INPUT[DISBALED]
+ SO IF YOU WANT TO SPECIFY A VALUE FOR THEM , ITS THE SAME
+ INPUT[VALUE="0"]
+ BUT ALWAYS BE CAREFUL THAT YOU CHOOSE THE RIGHT CLASS FOR EVERYTHING SO THAT YOU DONT LOSE IT 
+
+
+ lets change the example to images with alt attribiutes : 
+
+ ITS THE SA
+ ME FOR THE ALTS WHO ONLY HAVE ONE WORD IN THE VALUE 
+ IMG[ALT="DAMN"]
+
+ BUT
+  IF IT HAS SO MANY WORDS IN IT AS A VALUE , YOU SHOULD ADD ~ BEFORE THE EQUAL .
+ IMG [ALT~="DAMN"]
+
+
+ */
+
+
+
+ /* YOU CAN SOMETIMES STYLE THE ATTRIBIUTE ITSELF */
+
+  /* CLASS ATTRIBIUTE SELECTING: 
+  THERE ARE LOTS OF DIFFERENT WAYS TO DO THIS AND WE WILL COVER ALL OF IT 
+  FIRST , LETS COVER HOW YOU CAN CALL THE CLASS ATTRIBIUTE ITSELF WITH NO AFFECT
+  [CLASS="CLASSNAME"]
+
+
+  THERE IS : 
+  [CLASS|="CLASSNAME"]
+  LOOKS FOR THE CLASSNAME SPECIFIED IN THE CLASSNAMED OF THOSE TAGS
+  THEY SHOULD BE THE FIRST WORD
+  IF THERE IS ANOTHER WORD , THERE SHOULD BE A DASH (-) BETWEEN THEM
+
+  THERE IS 
+    [CLASS^="CLASSNAME"]
+    ITS THE SAME AS THE PREVIOUS ONE BUT , HAVING A DASH (-) AINT NECESSARY 
+    FOR EXAMPLE IF THE CLASSNAME IS 
+    TEXTEXAMPLE
+    THERE IS TEXT IS IT SO IT WORKS 
+
+
+   THERE IS 
+     [CLASS$="CLASSNAME"]|
+      ITS THE SAME AS THE PREVIOUS ONE BUT IT HAS TO BE AT THE END 
+FOR EXAMPLE THE CLASS NAME SHOULDT BE TEXT-AMIR
+IT HAS TO BE 
+AMIRTEXT
+AND THE UNDERLINE AND DASH AND ETC DOESNT MATTER
+
+    THERE IS 
+    [CLASS*="CLASSNAME"]
+    THIS DOESNT CARE
+    IF THERE IS A TEXT WORD IN IT THEN OK 
+    DOESNT MATTER IF ITS AT FIRST OR ETC
+
+    USE these in your portfolio 
+
+    /* | first one and dash
+^ first one without dash
+$ last one without dash 
+* all of em with or without at the first or end doesnt matter*/
+
+/* OBJECT FIT IN CSS : 
+
+IT IS USED TO FIT PICTURE AND IMAGES IN MANY DIFFERENT WAYS 
+
+THERE ARE MANY VALUES FOR THIS 
+CONTAIN : 
+IF YOU PAY ATTENTION , EVERY EACH IMG HAS ITS OWN SIZE
+AND THATS WHAT MAKES IT FIT 
+THEY HAVE TO BE CONSONANT SO THAT THE PICTURE IS FULLY VISIBLE
+WHEN YOU SET A HEIGHT AND WIDTH FOR AN IMG AND YOU GIVE IT OBJECT FIT CONTAIN ,
+YOU ARE ACTUALLY MAKING THE WIDTH AND HEIGHT CONSONANT SO THAT IT IS FULLY VISIBLE
+AND WHAT ACTUALLY HAPPENS IS , THE COMPUTER FINDS THE BEST AND DOES IT ITSELF
+
+COVER : 
+WHEN YOU GIVE AN IMG A WIDTH AND A HEIGHT AND OBJECT FIT COVER , THE IMG WILL START 
+TO FILL FROM THE DIRECTION OF THE PAGE (LTR OR RTL) THAT AMOUNT YOU GAVE IT 
+
+FILL : THE DEFULT 
+
+NONE : YOU RESIZE THE ACTUAL IMG BY THE HEIGHT AND THE WIDTH YOU HAVE GIVEN 
+
+SCALE DOWN : THE IMG STAYS VISIBLE BUT THE SIZE AND THE IMG IT FILLS GETS SMALLER OR BIGGER */
+
+/* CENTERING ELEMENTS WITH CSS : 
+MARGIN AUTO 
+IF YOU WANT TOP TO CHANGE TOO : 
+MARGIN AMOUNTpx AUTO
+YOU SHOULD DO IT ONLY FOR THE CONTAINER (THE PARENT ELEMENT)
+
+BUT BUT BUT BUT BUT BUT 
+
+IF YOU WANT TO CENTER AN ELEMENT INSIDE OF ITS PARENT ELEMENT : 
+PARENT POSITION RELATIVE
+CHILD POSITION ABSOLUTE 
+
+CHILD LEFT 50%
+RIGHT 50%
+TRANSFORM : TRANSLATE (-50% , -50%)
+ (ITS FOR ANIMATING BUT HERE ITS BEING USED) 
+NOTE: DONT FORGET TO SET A MAX WIDTH AND HEIGHT FOR THE CONTAINER
+
+
+
+*/
+
+
+ 
+
+ div [class|="text"]{
+   font-size: 30px;
+   color: darkblue;
+ 
+   
+ }
+ .just-to-test{
+   border: 5px solid black;
+   border-image: linear-gradient(to left,red,blue);
+   border-image-slice: 10;
+ 
+   overflow: auto;
+
+ }
+ .just-to-test .amirdodo{
+text-align: center;
+ }
+
+ /* HOW TO CENTER A NON TEXT WITH TEXT ALIGN IN CSS : 
+ MAKE A BLOCK PARENT ELEMENTS FOR IT (DIV,P,SECTION AND OTHER BLOCK ELEMENTS)
+ AND GIVE THE     PARENT     ELEMENT TEXT ALIGN CENTER  */
+
+
+
+
+ /* INHERIT AND INITIAL IN CSS : 
+ 
+ INIITIAL : THE MOST DEFULT VALUE OF THAT PRP 
+ INITIAL COLOR IS BLACK FOR EXAMPLE 
+ YOU CAN USE INITIAL INSTEAD OF UNSET AND NONE SOMEETIMES 
+ 
+ INHERIT : THE VALUE SETTED FOR THE PARENT IS SETTED FOR THE CHILD TOO
+ MEANS THAT WHEN YOU FOR EXMAPLE SET BORDER TO THE PARENT 1PX SOLID BLACK
+ AND YOU SAY THE CHILDs BORDER SHOULD BE INHERIT , IT SEARCHES FOR THE SAME PROPERTY IN THE PARENT ELEMENT AND SETS THE VALUE
+ 
+ */
+
+ /* HOST AND LOCAL ? use google inspector
+ css reset */   
+
+ /* IMPORTANT : always write the cleanest and the shortest code 
+ use shorthands and learn them 
+ write less code  */
+
+ /* DIFFERENCE BETWEEN DOING THE PROJECT AND PRODUCING THE PROJECT :
+ 
+ when doing the project , the loading speed aint important so we use different files for different parts of the web for example for the sidebar
+ or the footer or header or the css reset 
+ 
+ but when we want to give the project to the customer , it is important to copy and paste all of the codes in one file .
+ for example , when doing the project write the cssreset in another file for clean-being
+  but when giving it to the customer you have to copy paste the cssreset code and other css codes to only ONE css file  */
+
+ /* HOW TO USE CSS RESET : 
+ 
+ you have to either copy the reset code and paste it into your css file OR just download the css reset file */
+
+
+ /* HOW TO COMPILE CSS AND MINIFY THEM : 
+ 
+ when you do this , the speed increases in your webiste
+
+ as i said , you have to copy paste all of other codes into one particular file 
+ and in that file , you have to minify the css code so that it removes all the useless spaces and etc
+
+ how you do it is just : 
+
+ copy all of the code and paste it into a css minifier in the internet 
+
+ it gives you the code , then paste that code into your file
+ 
+ */
+ /* STEP BY STEP : 
+ 1. download css reset and put it in another file 
+ and do all of the nav and sidebar etc codes in another files for clean-being 
+ 2. after the project is ready , remove all of the "IMPORT" tags and and paste those css reset and stuff into ONE file 
+ (this is the same for js and others too) 
+ 3. minify that code in websites and copy paste to file 
+ */
+
+ /* NOTE : THIS IS FOR THE BEGINNERS YOU WILL LEARN (IF DIDNT , SEARCH FOR IT ) HOW TO USE GALP AND IT WILL TO ALL OF IT FOR YOU  */
+ /* USE AND LEARN CDN */
+
+
+
+body{
+    background-image: none!important;
+    background-size: unset!important;
+}
+.first-member,.secound-member,.third-member{
+    padding:0 15px ;
+  
+    box-sizing: border-box;
+
+ }
+
+ .first-member p,.secound-member p ,.third-member p{
+
+    border: 5px solid salmon;
+    border-image: linear-gradient(to left,red,blue);
+    border-image-slice: 10;
+    padding: 10px;
+    box-sizing: border-box;
+    /* background-image:linear-gradient(white,white),linear-gradient(to left,red,blue) ;
+    
+    border-radius: 5px;
+background-origin: border-box;
+background-clip: content-box,border-box; */
+ }
+ .container-fluid{
+    width: 100%;
+   
+    /* background-color: rgba(255, 0, 0, 0.59); */
+
+
+ }
+ 
+.sidebar{
+ 
+    /* margin: 0!important; */
+
+     padding-left: 15px;
+     padding-right: 0;
+    
+}
+.content{
+   
+    padding: 0 15px;
+}
+
+.container{
+  
+   
+    margin: 0 auto;
+
+    max-width: 1200px;
+
+    
+     }
+
+.sidebar-text,.content-text {
+  background-color: lightsalmon;
+margin-top: 0;
+padding: 10px;
+text-align: center;
+font-size: 20px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+height: 50px;
+}
+/* @media only screen and (max-width:767px ){
+    .content{
+        width: 100%;
+      
+     
+        
+   padding-left: 0!important;
+        padding-right: 0!important;
+        padding-bottom: 0!important;
+        padding-top: 0!important;
+        margin-bottom: 0!important;
+        margin-right: 0!important;
+        margin-top: 0!important;
+        margin-left: 0!important;
+      
+    }
+    .sidebar{
+ 
+        padding-left: 0!important;
+        padding-right: 0!important;
+        padding-bottom: 0!important;
+        padding-top: 0!important;
+        margin-bottom: 0!important;
+        margin-right: 0!important;
+        margin-top: 0!important;
+        margin-left: 0!important;
+    /* remove the space vertically when resizing */
+ 
+    
+
+
+/* .team-member1 p,.team-member2 p,.team-member3 p{
+   background-color: red;
+ 
+   height: 60px;
+
+}
+[class *="team-member"]{
+    padding: 0 15px;
+
+
+    
+   
+}
+.row::after{
+    display: table;
+    content: ""
+    ;
+clear: both;
+
+} */
+[class ^="col-"]{
+    float: right;
+    padding: 0 15px!important;
+}
+
+@media screen and (min-width:768px){
+
+    .col-md-1 {
+       width: 8.33%;
+    }
+    .col-md-2 {
+       width: 16.66%;
+    }
+   
+    .col-md-3 {
+       width: 25%;
+    }
+    .col-md-4 {
+       width: 33.32%;
+    }
+    .col-md-5 {
+       width: 41.5%;
+    }
+    .col-md-6 {
+       width: 50%;
+    }
+    .col-md-7 {
+       width: 58.31%;
+    }
+    .col-md-8 {
+       width: 66.64%;
+    }
+    .col-md-9 {
+       width: 75%;
+    }
+    .col-md-10 {
+       width: 83.3%;
+    }
+    .col-md-11 {
+       width: 91.3%;
+    }
+    .col-md-12 {
+       width: 100%;
+    } }
+
+
+    .gray-color{
+        background-color: gray;
+    }
+
+    .menu{
+        list-style-type: none;
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+    
+    
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+   
+      
+    }
+    /* the inside element have the padding bottom of 10px */
+    .menu li a {
+        text-decoration: none;
+        color: rgb(255, 230, 0);
+        font-family: vazir;
+
+
+    }
+
+    .menu li {
+display: inline;
+       
+        margin: 15px;
+
+     
+ 
+    }
+    .menu-parent{
+      
+    }
+    .about-to-test{
+        color: white;
+background-color: rgb(5, 5, 57);
+height: 200px;
+
+    }
+    .border{
+        border: 1px black solid;
+    }
+  .sidebar-test{
+    float: left;
+    background-color: black;
+   height: 100%;
+  }
+  .sidebar-test ul li a {
+    text-decoration: none;
+    color: gray;
+  padding-left: 0!important;
+  }
+  .sidebar-test ul li{
+list-style-type: none!important;
+  }
+  .align-left{
+    text-align: left;
+  }
+.first-name span{
+margin-right: 30px;
+
+
+}
+.last-name span{
+    margin-right: 32px;
+
+  
+}
+
+.form-gender{
+
+    display: inline-block;
+}
+[class *="gender-"]{
+    margin-left: 20px;
+    padding-left: 30px;
+}
+/* .gender-male{
+    width: 200px;
+  
+} */
+.gender-female{
+ padding-left: 93px;
+    display: inline-block;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.select-salutation{
+width: 176px;
+margin-left: 35px;
+}
+/* [selected]{
+ font-size: 20px;
+} */
+.education{
+    display: inline-block;
+}
+.checkbox-parent{
+    display: inline-block;
+    margin-left: 30px;
+}
+.save-button{
+    margin-left: 119px;
+    color: rgba(0, 0, 0, 0.681);
+    background-color: white;
+    border: 1px solid black;
+
+}

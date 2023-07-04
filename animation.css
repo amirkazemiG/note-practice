@@ -1,0 +1,185 @@
+.moving{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: moving;
+    animation-duration: 10s;
+top: 0;
+    left: 0;
+    position: relative;
+    animation-iteration-count: 2;
+    /* animation-direction: alternate; */
+    animation-timing-function: linear;
+ }
+ @keyframes moving{
+
+0%{ background-color: red;
+    top: 0;
+    left: 0;
+
+}
+25%{
+    background-color: blue;
+    left: 0
+    ;
+    top: 200px;
+}
+50%{
+    background-color: yellow;
+    left: 200px;
+    top: 200px;
+}
+75%{
+    top: 0;
+    left: 200px;
+    background-color: green;
+}
+100%{
+ top: 0;
+ left: 0;
+    background-color: orange;
+}
+
+ }
+
+ .shortcut{
+   
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    animation-name: shortcut;
+    position: relative;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+ }
+
+ @keyframes shortcut{
+    0%{
+        left: 0;
+        top: 0;
+    }
+    100%{
+        left: 200px;
+        top: 200px;
+    }
+ }
+ /* @keyframes menu{
+from{right: -200px;}
+to{right: 200px;}
+ } */
+ html,body{
+    height: 100%;
+ }
+
+ .menu-animation{
+    width: 100px;
+    height: 100%;
+    background-color: black;
+    position: relative;
+translate: (-100%);
+right: 100%;
+left: 100%;
+   text-align: right;
+
+
+   display: none;
+ }
+ .menu-animation-burger button:active .menu-animation{
+    
+margin-top: -200px;
+ height: 100%;
+ display: block!important;
+ }
+ .menu-animation-burger{
+    direction: rtl;
+ }
+
+
+ @font-face {
+    font-family: vazir;
+    src: url(../fonts/Vazir-Black.eot) format(eot)
+    ;
+
+ }
+
+ .shakib-animation{
+    font-family: vazir;
+    animation-name: shakib;
+    font-size: 30px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+ }
+ @keyframes shakib{
+    from{
+        font-size: 30px;
+    }
+    to{
+        font-size: 50px;
+    }
+ }
+.loading{
+    height: 100px;
+    width: 100px;
+    border: 8px dashed gray;
+border-radius: 50%;
+    border-top: 8px dashed black;
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+
+}
+@keyframes loading{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+
+.flip-card{
+   height: 300px;
+   width: 300px;
+
+   perspective: 800px;
+   float: right;
+   margin: 100px;
+
+}
+.flip-card-inner{
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+    
+}
+.flip-card-front,.flip-card-back{
+    height: 100%;
+    width: 100%;
+    position: absolute
+    ;
+
+}
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.flip-card-back{
+    backface-visibility: hidden;
+    transform: rotatey(180deg);
+    text-align: center;
+    color: white;
+    font-family: helvetica;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg,red,blue,yellow,black,green,orange);
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotatey(180deg) ;
+}
